@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+            This is where the metadata is stored.
+            Data in this section is not meant to be seen.
+          -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Ephraim">
+    <meta name="description" content="This is a description of everything I am learning in HTML.">
+    <title>My First Webpage</title>
+    <link rel="icon" href="html5.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <h1>Hello World!</h1>
+    <p>This is my first webpage!</p>
+
+    <hr>
+
+    <nav>
+        <ul>
+            <li> <a href="#beginner">What this is about</a> </li>
+
+            <li> <a href="#entities">HTMl Entities</a> </li>
+
+            <li> <a href="#links">HTML Links</a> </li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <section id="beginner">
+        <h2>I'm a HTML beginner</h2>
+        <p>I love learning new technologies.</p>
+        <p>I hope to use what I have learnt to <em>make the world a better place</em>.</p>
+
+        <h3>There's More</h3>
+        <p>There's more to what I love.</p>
+
+        <hr>
+
+        <h2>Here's What I Love!</h2>
+        <p>I love learning new technologies and using them in various places and ways.</p>
+
+        <h3>There's More</h3>
+        <p>There's more to what I love.
+            <!-- Lets also add extra whitespaces before some of these lines. -->
+            <br>... I love travelling.
+            <br>... &nbsp; &nbsp; &nbsp; We can tell HTML not to remove extra whitespaces by use of HTML entities. HTML
+            entities begin with an <strong>ampersand</strong>.
+            <br>... I hope that through html programming, I will get to travel the world.
+        </p>
+
+        <h3>What I don't love</h3>
+        <p>Obviously there are some things I don't like.
+            <br> I <strong>absolutely hate</strong> stopping what I love to do.
+        </p>
+        <!-- The <p> tags are block-level elements. These add a space before and after the text. We can also add inline tags, like <em> and <strong>.
+
+    Also we can add HTML entities. These are things that we want to use in text yet HTML renders them. This could be things like extra whitespaces, we start them off with &
+    -->
+    </section>
+
+    <hr>
+
+    <section id="entities">
+        <h2>More HTML Entities</h2>
+        <p>There are more HTML entities we can add. Some of them are:
+            <br>The less than sign: &lt;
+            <br>The greater than sign: &gt;
+        </p>
+
+        <hr>
+        <h2>HTML Lists.</h2>
+        <h3>Ordered Lists</h3>
+        <p>This is an ordered HTML list. It contains multiple items:</p>
+        <ol>
+            <li>This is the first list item.</li>
+            <li>This is the second list item.</li>
+            <li>This is the third list item.</li>
+        </ol>
+
+        <h3>Unordered Lists</h3>
+        <p>We can also have unordered lists in our text. For example:</p>
+        <ul>
+            <li>
+                <p>This paragraph is an element of an unordered list.</p>
+            </li>
+            <li>
+                <p>This paragraph is also nested within a list. More than that, the following address is also nested
+                    within
+                    the same list.</p>
+                <address> (262) 250-9833 <br>
+                    78-W17331 Wildwood Dr <br>
+                    Menomonee Falls, Wisconsin(WI), 53051 <br></address>
+            </li>
+        </ul>
+
+        <h3>Description lists</h3>
+        <p>We can also have description lists to describe things. Let us write one.</p>
+        <dl>
+            <dt>This is a description term e.g Kenya.</dt>
+            <dd>This is a description definition of the term above</dd>
+
+            <dt>This is another desc. term.</dt>
+            <dd>This is a definition of the second desc. term.</dd>
+        </dl>
+
+    </section>
+
+    <hr>
+
+    <section id="links">
+
+        <h2>HTML Links</h2>
+        <p>The Hypertext in HTML is for links. HTML allows use to link to other websites in the internet and also in our
+            server.</p>
+        <p>We can create absolute links that link to websites in the internet, like this one that links to the <abbr
+                title="Mozilla Developer Network"><a href="developer.mozilla.org">MDN</a></abbr>.</p>
+        <p>We can also have relative links that link to files in our server. We list these relative to where the current
+            file is. For example, we can link to our <a href="about.html">about</a> page.</p>
+
+    </section>
+
+    <section>
+        <h2>Images</h2>
+        <p>We are going to look at how we can add images in HTML. Let us add our first images.</p>
+
+        <figure>
+            <figcaption>An example of HTML5 code</figcaption>
+            <p><code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code></p>
+            <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="I am learning HTML5" width="300" height="300">
+        </figure>
+
+
+        <p>I would love to go here!</p>
+        <figure>
+            <!-- Objects in the <figure> element are indented by default. -->
+            <img src="img/caribbean.jpg" alt="Caribbean Beach" title="I hear its nice at this time of the year!"
+                loading="lazy">
+            <figcaption>Sunny Carribean Beach</figcaption>
+        </figure>
+        <!-- 
+            We have added the loading attribute. By default it is 'eager', meaning that the image is loaded as soon as the webpage is opened. Lazy loading does not load images that are below the fold unless until they are near view area. 
+            We also add a <figure> object around the image. The figure object allows us to add a caption with <figcaption>
+        -->
+
+        <hr>
+
+        <h3>Another Figure Example</h3>
+        <figure>
+            <p>
+                It's probably not a very good idea to quote me.
+            </p>
+            <figcaption><em>Me</em></figcaption>
+        </figure>
+
+        <hr>
+    </section>
+    <hr>
+    <!-- Copyright Information -->
+    <br>&lt; &lt; &lt; &copy; <a href="about.html">Ephraim Muya</a> &gt; &gt; &gt;
+
+    <hr>
+
+    <!-- Back to top -->
+    <a href="#">Back To Top</a>
+</body>
+
+</html>
