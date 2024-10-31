@@ -26,16 +26,25 @@ a:hover {
 }
 
 h1,
-p {
+h2 {
     font-family: "Raleway","Helvetica Neue", Helvetica,Arial, sans-serif;
 }
 
-.all_content {
+h1 {
+    font-size: 41px;
+}
+
+h2 {
+    font-size: 34px;
+}
+
+.nav_bar,
+.content {
     max-width: 1150px;
     margin: auto;
 }
 
-.all_content .nav_bar {
+.nav_bar {
     display: flex;
     justify-content: space-between;
 }
@@ -45,7 +54,6 @@ p {
     margin-top: 20px;
     margin-bottom: 30px;
     font-weight: 500;
-    font-size: 41px;
     width: 66%;
 }
 
@@ -119,7 +127,7 @@ p {
 .tag_item {
     display: block;
     text-align: right;
-    margin: 4px;
+    margin: 4px 0;
 }
 
 
@@ -151,4 +159,31 @@ a.link_to_next:hover {
     /* color: white; */
     color: white;
     background-color: #4582ec;
+}
+
+/* Footer section */
+footer {
+    background-color: #f5f5f5;
+}
+
+.footer_c1,
+.footer_c2 {
+    height: 50%;
+    width: 1150px;
+    margin: auto;
+}
+
+.footer_c1 p,
+.footer_c2 p {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /* width */
+}
+
+.footer_c2 p {
+    text-align: center;
+}
+
+.zyte {
+    color: #b02cce;
 }
