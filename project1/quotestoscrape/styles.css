@@ -4,14 +4,25 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: sans-serif;
 }
 
 body {
+    font-size: 16px;
+    font-family: sans-serif;
     line-height: 1.42857143;
+    color: #333333;
 }
 
+
 a {
+    color: #4582ec;
     text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+    color: #134fb8;
 }
 
 h1,
@@ -49,6 +60,11 @@ p {
     text-align: right;
 }
 
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
 .all_content .content .quote_box {
     padding: 10px;
     border: 1px solid green;
@@ -58,41 +74,40 @@ p {
     width: 95%;
 }
 
-
-.content {
-    display: flex;
-    justify-content: space-between;
-}
-
+/* Common to all tags */
 .tag {
     background-color: #7ca3e6;
     border-radius: 4px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-.tag a,
-.tag_under_quote a {
+    padding: 2px 5px;
     color: white;
-    font-size: small;
-    font-family: sans-serif;
 }
 
-.tag a:hover {
-    cursor: pointer;
-    background-color: dd;
+/* The actual quote */
+.quote_box .text {
+    display: block;
+    margin-bottom: 5px;
+    font-size: large;
+    font-style: italic;
 }
+
+/* Tags under quote */
+.tags_under_quote .tag {
+    font-size: small;
+}
+
 
 .tags_list_under_quote {
-    margin-bottom: 4px;
+    margin-top: 10px;
 }
 
 .quote_source {
     display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
+}
+
+/* quote author */
+.quote_source .author {
+    font-weight: bold;
+    color: #3677E8;
 }
 
 .tags_in_top_tags {
@@ -107,10 +122,6 @@ p {
     margin: 4px;
 }
 
-.tag_item span.tag {
-    padding-top: 5px;
-    padding-bottom: 2px;
-}
 
 .quotes {
     width: 67%;
@@ -121,7 +132,23 @@ p {
     text-align: right;
 }
 
-small.quoted_source {
-    font-weight: bold;
-    color: #3677E8;
+/* Next Section */
+.link_to_next_section {
+    display: flex;
+    margin-bottom: 60px;
+    justify-content: right;
+}
+
+a.link_to_next {
+    border: 1px solid #dddddd;
+    border-radius: 15px;
+    padding: 5px 14px;
+    font-family: "Raleway","Helvetica Neue", Helvetica,Arial, sans-serif;
+    color: black;
+}
+
+a.link_to_next:hover {
+    /* color: white; */
+    color: white;
+    background-color: #4582ec;
 }
