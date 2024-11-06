@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Globals */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+body {
+    font-family: open sans, helvetica neue, helvetica, arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Header Content Here*/
+
+.header_elem {
+    background-color: transparent;
+}
+
+.page_header {
+    height: 65px;
+    background-color: transparent;
+    background-image: -webkit-radial-gradient(0% 0%, circle, rgba(100, 66, 255, 0.9) 15%, rgba(0, 108, 255, 0.9) 50%, rgba(12, 180, 206, 0.9) 85%)
+}
+
+.header_wrapper {
+    width: 97%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo,
+.nav_links {
+    margin-top: .7%;
+    margin-bottom: 1%;
+}
+
+.logo {
+    width: 13%;
+}
+
+.nav_links {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user_profile_link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-left: 22px;
+    margin-right: 25px;
+}
+
+.username {
+    padding: 12px;
+}
+
+.header_elem {
+    text-transform: uppercase;
+    font-family: open sans, helvetica neue, helvetica, arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+}
+
+.user img {
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+}
+
+
+/* ------------- Main content ------------- */
+.main_content_wrapper {
+    width: 97%;
+    margin: auto;
+}
+
+
+/* Navigation section Here */
+.nav_main {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.nav_main li {
+    list-style: none;
+    display: inline-block;
+}
+
+.nav_main li a {
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+.nav_main li a:hover {
+    color: #274fd6;
+    border-bottom-color: #274fd6;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    transition-duration: 0.1s;
+}
+
+
+.main_content {
+    border: 1px solid rgb(200, 200, 200);
+}
+
+/* Main content Header */
+.main_content_header {
+    border-bottom: 1px solid rgb(200, 200, 200);
+    height: 40px;
+}
+
+.path_breadcrumb_b::before {
+    content: "\f105";
+}
+.main_content_header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+    height: 80%;
+    margin: 10px 20px;
+}
+
+/* Main content body */
+.main_content_body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 0 20px;
+}
+
+
+.note_topic_wrapper {
+    position: sticky;
+    top: 130px;
+    margin-top: 100px;
+}
+
+.note_topic {
+    display: inline-block;
+    color: #274fd6;
+    background-color: rgb(243, 246, 253);
+    padding: 20px;
+    padding-right: 170px;
+    border-left: 2px solid #274fd6;
+}
+
+
+.questions_header_wrapper {
+    border-bottom: 1px solid rgb(200, 200, 200);
+    margin-top: 20px;
+}
+
+.question_hwrapper_elems {
+    font-weight: 600;
+    color: rgb(49, 49, 49);
+    padding: 10px 0;
+}
+
+.hwrapper_elem2 {
+    padding-bottom: 40px;
+}
+
+/* Actual Question Content */
+.questions_wrapper {
+    display: grid;
+}
+
+.question_box {
+    margin: 20px 0;
+}
+.question_choice_wrapper {
+    /* display: block; */
+    border: 2px solid rgb(200, 200, 200);
+    border-radius: 4px;
+    height: 47px;
+    margin-bottom: 11px;
+}
+
+.question_choice_wrapper:hover {
+    cursor: pointer;
+    border: 2px solid rgb(39, 79, 214);
+}
+
+.question_choice_wrapper_content {
+    /* height: 0%; */
+    display: block;
+    margin-top: 14px;
+}
+
+.question_choices {
+    margin: 0 10px;
+}
+
+.question_title {
+    font-size: 24px;
+    padding-bottom: 12px;
+    font: Georgia, Cambria,"Times New Roman",Times,serif;
+}
+
+.question_points,
+.number_tries {
+    padding-bottom: 12px;
+    color: #5e5e5e;
+    font-size: .97em;
+    display: inline-block;
+}
+
+.actual_question {
+    font-size: 20px;
+    padding: 15px 0;
+}
+
+.options_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.number_tries {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Buttons */
+.submit_button {
+    height: 44px;
+    width: 95px;
+    font-size: 16px;
+    border-radius: 22px;
+    color: white;
+    background-color: rgb(39, 79, 214);
+    border: 1px solid rgb(39, 79, 214);
+}
+
+.submit_button:hover {
+    cursor: pointer;
+    text-shadow: 0 1px 0 #0d2c94;
+    background-color: rgb(124, 148, 231);
+}
+
+.right_side_options div {
+    display: inline-block;
+}
+
+.right_side_options button {
+    font-size: 14px;
+    height: 57px;
+    border-radius: 30px;
+    background-color: white;
+    border: none;
+    color: rgb(39, 79, 214);
+}
+
+.right_side_options button:hover {
+    transition: 0.3s;
+    color: white;
+    background-color: rgb(124, 148, 231);
+    border: 1px solid rgb(39, 79, 214);
+}
+
+.save_button_wrapper {
+    width: 50px;
+    padding-right: 3px;
+    border-right: 1px solid rgb(242, 242, 242);
+}
+
+.answer_button_wrapper {
+    width: 110px;
+    margin-left: 3px;    
+}
+
+.save_button,
+.answer_button {
+    width: 100%;
+}
+
+.divider {
+    margin-bottom: 40px;
+}
+
+/* Question content Footer */
+.questions_footer {
+    margin: 20px 0;
+}
+.discussion {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-bottom: 30px;
+}
+
+.discussion_button {
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: white;
+    color: rgb(124, 148, 231);
+    border: 1px solid rgb(124, 148, 231);
+    border-radius: 3px;
+}
+
+.discussion_button:hover {
+    background-color: rgb(124, 148, 231);
+    color: white;
+    transition: 0.2s;
+}
+
+.previous_next_buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.previous_next_buttons button {
+    width: 120px;
+    height: 45px;
+    border: none;
+    color: white;
+    background-color: rgb(39, 79, 214);
+    font-size: 16px;
+}
+
+.previous_next_buttons button:hover {
+    border-bottom: 4px solid rgb(39, 79, 214);
+    background-color: white;
+    color: black;
+}
+
+/* Copyright Section */
+.copyright_section {
+    margin-top: 6px;
+    margin-bottom: 50px;
+    /* width: 97%; */
+}
+
+.copyright {
+    font-size: 14px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+/* Footer Section */
+.page_footer {
+    width: 100%;
+    background-color: #1f1d20;
+}
+
+/* Every list item in the footer */
+.page_footer li {
+    list-style: none;
+    display: inline-block;
+}
+
+.footer_content {
+    padding: 50px 20px;
+
+}
+
+.footer_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer_list li a {
+    color: white;
+    padding: 0 10px;
+}
+
+.sm_icons_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons li {
+    padding: 0px 4px;
+}
+
+.icon-list_icon {
+    width: 35px;
+    height: 35px;
+    fill: rgb(39, 79, 214);
+}
+
+.icon-list_icon:hover,
+.icon-list_icon:active,
+.icon-list_icon:active {
+    fill: rgb(124, 148, 231);
+}
+
+.copyright_text {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}

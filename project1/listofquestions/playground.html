@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html playground</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+
+        /* .downloadable_wrapper {
+            background-color: rgb(226, 199, 164);
+            border-top: 12px solid rgb(255, 60, 0);
+            padding: 0 20px;
+            max-width: 400px;
+            font-family: Lexend Deca, sans-serif;
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+        }
+
+        .top_wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .top_wrapper:hover {
+            cursor: pointer;
+            background-color: rgba(165, 160, 233);
+        }
+
+        .pitch_title {
+            padding: 15px 0;
+            text-align: center;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+
+        .actual_pitch {
+            padding: 15px 0;
+            text-align: center;
+            font-weight: 300;
+        }
+
+        .download_button_wrapper {
+            padding: 10px 0;
+            padding-bottom: 15px;
+        }
+
+        .download_button {
+            background-color: rgb(255, 60, 0);
+            border-radius: 8px;
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        .download_button a {
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 20px
+        }
+
+        .download_button:hover {
+            cursor: pointer;
+        }
+
+        svg {
+            padding-left: 10px;
+        }
+        */
+
+        /* .sub_main_content_wrapper {
+            background-color: #fcead7;
+            font-family: Lexend Deca, sans-serif !important;
+        }
+
+        .subscribe_content_wrapper {
+            width: 80%;
+            margin: auto;
+            padding-bottom: 30px;
+        }
+
+        .sub_content_main {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .subscribe_tab {
+            border-radius: 8px;
+            padding: 10px;
+            padding-bottom: 36px;
+            display: grid;
+            grid-template-columns: 38px 1fr 38px;
+            align-items: start;
+            max-height: 100px;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+
+        .subscribe_tab:hover {
+            background-color: #eaf0f6;
+        }
+
+        .main_title {
+            text-align: center;
+            padding: 30px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            text-align: center;
+            padding-bottom: 30px;
+            font-weight: 300;
+            font-size: 18px;
+        }
+
+        .topics_one,
+        .topics_two {
+            max-width: 326px;
+        }
+
+        .about_pitch {
+            text-align: left;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .pitch_topic {
+            display: block;
+            padding: 8px 0;
+            font-size: 18px;
+        }
+
+        .check_uncheck svg,
+        .image_section img {
+            padding-bottom: 10px;
+        }
+
+        .image_section img {
+            padding-right: 5px;
+            padding-left: 2px;
+        }
+
+
+        .user_details_wrapper {
+            padding: 0 10px;
+        }
+
+
+        .subscribe_button,
+        .input_email,
+        .after_text {
+            max-width: 310px;
+        }
+
+        .subscribe_button,
+        .input_email {
+            width: 100%;
+            height: 50px;
+            margin: 10px 0;
+        }
+
+        .input_email {
+            border-radius: 5px;
+            border: 1px solid #7691ad;
+            font-family: inherit;
+            padding-left: 15px;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        .input_email:hover {
+            cursor: pointer;
+            box-shadow: 0 0 0 1px #7691ad;
+        }
+
+        .subscribe_button {
+            background-color: #eaf0f6;
+            color: rgb(64, 64, 64);
+            border-radius: 6px;
+            cursor: not-allowed;
+        }
+
+        .after_text,
+        .email_address {
+            font-weight: 500;
+        }
+
+        .after_text {
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        .cta {
+            font-size: 14px;
+            font-family: inherit;
+            font-weight: 500;
+            color: #99afc4;
+        }
+
+        .email_address {
+            font-size: 14px;
+        }
+
+        a {
+            color: #0068b1;
+        }
+*/
+
+        /* .page_footer {
+            background-color: black;
+            font-family: Lexend Deca, sans-serif;
+        }
+
+        .footer_wrapper {
+            width: 82%;
+            margin: auto;
+            padding: 30px 0;
+        }
+
+        .page_footer>* {
+            color: white;
+            background-color: transparent;
+            font-family: inherit;
+        }
+
+        .list_name {
+            font-weight: 500;
+        }
+
+        .list_section {
+            display: grid;
+            flex-direction: column;
+            grid-template-columns: 3fr 4fr;
+        }
+
+        .list_section ul {
+            padding: 20px 0;
+            padding-right: 20px;
+        }
+
+        .list_section li {
+            list-style: none;
+            line-height: 24px;
+            margin: 8px 0;
+        }
+
+        .list_section a {
+            text-decoration: none;
+            font-size: 12px;
+            color: gray;
+            font-weight: 600;
+
+        }
+
+        .left_list_wrapper {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .right_list {
+            display: flex;
+            flex-direction: row;
+            padding-left: 20px;
+            border-left: 1px solid white;
+        }
+
+        .first_right_list {
+            padding-left: 40px;
+        }
+
+        .logos_section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 40px;
+        }
+
+        .logos_section::before {
+            content: '';
+            position: absolute;
+            width: 25%;
+            left: 100px;
+            border-top: 1px solid white;
+        }
+
+        .logos_section::after {
+            content: '';
+            position: absolute;
+            width: 25%;
+            right: 100px;
+            border-top: 1px solid white;
+        }
+
+        .logos ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        .logos ul li {
+            padding: 0 20px;
+        }
+
+        .logos svg {
+            width: 23px;
+            height: 26px;
+            fill: white;
+        }
+
+        .links_section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .copyright_wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1em 0;
+        }
+
+        .copyright_wrapper a {
+            display: inline-block;
+            font-size: 16px;
+            line-height: 28px;
+        }
+        .copyright_wrapper img {
+            max-width: 100px;
+        }
+
+        .copyright_wrapper p {
+            font-size: 0.75em;
+            line-height: .875em;
+            font-weight: 500;
+        }
+
+        .links ul li {
+            display: inline-block;
+            list-style: none;
+        }
+
+        .links ul li::after {
+            content: '|';
+            height: 100vh;
+            position: relative;
+            margin: 0 10px;
+            right: 0;
+        }
+
+        #no_border {
+            border: none;
+        }
+
+        .links ul li a {
+            color:white;
+            font-size: .9em;
+        }
+
+        .links ul li a:hover {
+            color: lightblue;
+        } */
+
+        /* #card_wrapper {
+            font-family: Lexend Deca, sans-serif;
+            font-size: medium;
+        }
+
+        body {
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+        }
+
+        #card_wrapper {
+            background-color: lightslategray;
+        }
+
+        #card_text_wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        #cl-icon-right {
+            width: 32px;
+            height: 1em;
+            fill: white;
+            padding-left: 5px;
+        } */
+
+        /* #section_wrapper {
+            width: 100%;
+            background-color: transparent;
+            font-family: Lexend Deca, sans-serif;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        #website {
+            max-width: 80%;
+            margin: auto;
+        }
+
+        #website header {
+            display: flex;
+            align-items: baseline;
+            gap: .5rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        #website header h2::after {
+            content: "";
+            display: block;
+            flex-grow: 1;
+            border: none;
+            height: 2px;
+            background-color: rgb(255, 188, 75);
+        }
+
+        #website header h2 {
+            flex-grow: 1;
+            display: flex;
+            align-items: baseline;
+            gap: .5rem;
+        }
+
+        #website header a {
+            color: #0068b1;
+        }
+
+        #section_body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        #left_body_section {
+            display: grid;
+            grid-template-rows: 320px 1fr;
+            gap: 10px;
+        }
+
+        #right_body_section nav {
+            display: grid;
+            grid-template-rows: repeat(5, 1fr);
+            gap: 18px;
+        }
+
+        .card_details_wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-bottom: 2px solid #dbe4ed;
+            padding-bottom: 10px;
+            font-size: .895em;
+        }
+
+        .card_details_wrapper h3 {
+            font-size: 1em;
+            font-weight: 500;
+        }
+
+        .article_author_date {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 5px;
+            color: #697580;
+        }
+
+        .card_details_wrapper p {
+            font-weight: 300;
+        } */
+
+        #network_section_wrapper {
+            width: 100%;
+            background-color: #f6f9fc;
+            font-family: Lexend Deca, sans-serif;
+            font-size: 16px;
+        }
+
+        #network_section {
+            width: 85%;
+            margin: auto;
+        }
+
+        #network_section header {
+            font-size: 1.2em;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        #card_wrapper {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 48px 1fr 48px;
+            column-gap: 1rem;
+        }
+
+        #card_grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 1.6rem;
+            row-gap: 1em;
+        }
+
+        .card_holder {
+            list-style: none;
+        }
+
+        .card {
+            display: grid;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #dbe4ed;
+            grid-template-rows: 1.5em fit-content max-content;
+        }
+
+        .card img {
+            height: 305px;
+        }
+
+        .card>p {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        .img_details {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: 5.5em 1.8em;
+            height: max-content;
+            margin-top: 1.5em;
+        }
+
+        .img_details>p {
+            font-weight: 500;
+        }
+
+        .details_card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .details_card p {
+            font-size: .895em;
+        }
+
+        .details_card>p:nth-child(1) {
+            display: flex;
+            align-items: center;
+        }
+
+        .details_card>p:nth-child(2) {
+            font-weight: 300;
+        }
+
+        .details_card svg {
+            margin-right: 10px;
+        }
+
+        .nav_key button {
+            border-radius: 30px;
+            background-color: #ffffff;
+        }
+
+        .nav_key button:hover {
+            background-color: #eaf0f6;
+        }
+
+        .nav_key button svg {
+            width: 48px;
+            height: 48px;
+            padding: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- <div class="downloadable_wrapper">
+            <div class="top_wrapper">
+                <p class="pitch_title">
+                    25 Free Html and Css hacks
+                </p>
+                <svg class="icon" width="30px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                     style="fill: #000000">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M917.333333 364.8L851.2 298.666667 512 637.866667 172.8 298.666667 106.666667 364.8 512 768z"
+                            fill="#2196F3"></path>
+                    </g>
+                </svg>
+            </div>
+            <p class="actual_pitch">Tangible tips and coding templates from experts to help you code better and faster.
+            </p>
+            <div class="download_button_wrapper">
+                <button class="download_button"><a href="#">Download the free guide</a></button>
+            </div>
+        </div> -->
+
+        <!-- <div class="sub_main_content_wrapper">
+            <div class="subscribe_content_wrapper">
+                <h1 class="main_title">
+                    Subscribe to HubSpot's Newsletters
+                </h1>
+                <h2 class="subtitle">
+                    Get the best in industry news, delivered to your inbox.
+                </h2>
+                <div class="sub_content_main">
+                    <div class="topics_one">
+                        <div class="subscribe_tab">
+                            <div class="image_section">
+                                <img src="images/hustle.png" alt="" width="35px">
+                            </div>
+                            <div class="about_card">
+                                <p class="about_pitch">
+                                    <strong class="pitch_topic">The Hustle</strong>
+                                    The latest in business and tech
+                                </p>
+                            </div>
+                            <span class="check_uncheck">
+                                <svg viewbox="0 0 24 24" width="32" style="color:white;">
+                                    <path
+                                        d="M12,2 C6.47715282,2 2,6.47715282 2,12 C2,17.5228475 6.47715282,22 12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.47715282 17.5228475,2 12,2 Z M12.5732408,5.50217294 C12.6754446,5.60437683 12.7504465,5.73375106 12.7865767,5.87850748 L12.8062035,5.98977476 L12.8106631,11.1892149 L17.9245861,11.1893153 C18.1324616,11.1893153 18.3220469,11.2675774 18.4655422,11.3961919 C18.6106148,11.5262203 18.7083987,11.7078046 18.7306614,11.9120202 C18.7345587,12.1926644 18.64708,12.3999289 18.5138568,12.5485403 C18.4082566,12.666338 18.2722656,12.7489248 18.1194031,12.7869912 L18.001804,12.8070481 L12.8107852,12.8106862 L12.8106847,17.9245865 C12.8106847,18.1484509 12.7199457,18.3511221 12.5732406,18.4978272 C12.4265355,18.6445323 12.2238642,18.7352713 11.9999999,18.7352713 C11.7761354,18.7352713 11.5734644,18.6445322 11.4267592,18.4978271 C11.3245554,18.3956232 11.2495533,18.2662491 11.213423,18.1214928 L11.1937962,18.0102256 L11.1893366,12.8107854 L6.07541354,12.810685 C5.86753809,12.810685 5.67795278,12.732423 5.53445751,12.6038084 C5.38938491,12.4737801 5.29160102,12.2921958 5.26933824,12.0879801 C5.265441,11.807336 5.35291965,11.6000714 5.48614291,11.45146 C5.59174308,11.3336623 5.72773402,11.2510756 5.88059658,11.2130091 L5.99819569,11.1929522 L11.1892146,11.189314 L11.189315,6.07541386 C11.189315,5.85154942 11.280054,5.64887821 11.4267591,5.50217311 C11.5734642,5.35546801 11.7761354,5.26472902 11.9999998,5.26472902 C12.2238643,5.26472902 12.4265357,5.35546784 12.5732408,5.50217294 Z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="subscribe_tab">
+                            <div class="image_section">
+                                <img src="images/masters-in-marketing.png" alt="" width="35px">
+                            </div>
+                            <div class="about_card">
+                                <p class="about_pitch">
+                                    <strong class="pitch_topic">Masters in Marketing</strong>
+                                    Everything you need to become a better marketer
+                                </p>
+                            </div>
+                            <span class="check_uncheck">
+                                <svg viewbox="0 0 24 24" width="32" style="color:white;">
+                                    <path
+                                        d="M12,2 C6.47715282,2 2,6.47715282 2,12 C2,17.5228475 6.47715282,22 12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.47715282 17.5228475,2 12,2 Z M12.5732408,5.50217294 C12.6754446,5.60437683 12.7504465,5.73375106 12.7865767,5.87850748 L12.8062035,5.98977476 L12.8106631,11.1892149 L17.9245861,11.1893153 C18.1324616,11.1893153 18.3220469,11.2675774 18.4655422,11.3961919 C18.6106148,11.5262203 18.7083987,11.7078046 18.7306614,11.9120202 C18.7345587,12.1926644 18.64708,12.3999289 18.5138568,12.5485403 C18.4082566,12.666338 18.2722656,12.7489248 18.1194031,12.7869912 L18.001804,12.8070481 L12.8107852,12.8106862 L12.8106847,17.9245865 C12.8106847,18.1484509 12.7199457,18.3511221 12.5732406,18.4978272 C12.4265355,18.6445323 12.2238642,18.7352713 11.9999999,18.7352713 C11.7761354,18.7352713 11.5734644,18.6445322 11.4267592,18.4978271 C11.3245554,18.3956232 11.2495533,18.2662491 11.213423,18.1214928 L11.1937962,18.0102256 L11.1893366,12.8107854 L6.07541354,12.810685 C5.86753809,12.810685 5.67795278,12.732423 5.53445751,12.6038084 C5.38938491,12.4737801 5.29160102,12.2921958 5.26933824,12.0879801 C5.265441,11.807336 5.35291965,11.6000714 5.48614291,11.45146 C5.59174308,11.3336623 5.72773402,11.2510756 5.88059658,11.2130091 L5.99819569,11.1929522 L11.1892146,11.189314 L11.189315,6.07541386 C11.189315,5.85154942 11.280054,5.64887821 11.4267591,5.50217311 C11.5734642,5.35546801 11.7761354,5.26472902 11.9999998,5.26472902 C12.2238643,5.26472902 12.4265357,5.35546784 12.5732408,5.50217294 Z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="subscribe_tab">
+                            <div class="image_section">
+                                <img src="images/pipeline.png" alt="" width="35px">
+                            </div>
+                            <div class="about_card">
+                                <p class="about_pitch">
+                                    <strong class="pitch_topic">The Pipeline</strong>
+                                    Keep your sales pipeline full with our expert tips
+                                </p>
+                            </div>
+                            <span class="check_uncheck">
+                                <svg viewbox="0 0 24 24" width="32" style="color:white;">
+                                    <path
+                                        d="M12,2 C6.47715282,2 2,6.47715282 2,12 C2,17.5228475 6.47715282,22 12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.47715282 17.5228475,2 12,2 Z M12.5732408,5.50217294 C12.6754446,5.60437683 12.7504465,5.73375106 12.7865767,5.87850748 L12.8062035,5.98977476 L12.8106631,11.1892149 L17.9245861,11.1893153 C18.1324616,11.1893153 18.3220469,11.2675774 18.4655422,11.3961919 C18.6106148,11.5262203 18.7083987,11.7078046 18.7306614,11.9120202 C18.7345587,12.1926644 18.64708,12.3999289 18.5138568,12.5485403 C18.4082566,12.666338 18.2722656,12.7489248 18.1194031,12.7869912 L18.001804,12.8070481 L12.8107852,12.8106862 L12.8106847,17.9245865 C12.8106847,18.1484509 12.7199457,18.3511221 12.5732406,18.4978272 C12.4265355,18.6445323 12.2238642,18.7352713 11.9999999,18.7352713 C11.7761354,18.7352713 11.5734644,18.6445322 11.4267592,18.4978271 C11.3245554,18.3956232 11.2495533,18.2662491 11.213423,18.1214928 L11.1937962,18.0102256 L11.1893366,12.8107854 L6.07541354,12.810685 C5.86753809,12.810685 5.67795278,12.732423 5.53445751,12.6038084 C5.38938491,12.4737801 5.29160102,12.2921958 5.26933824,12.0879801 C5.265441,11.807336 5.35291965,11.6000714 5.48614291,11.45146 C5.59174308,11.3336623 5.72773402,11.2510756 5.88059658,11.2130091 L5.99819569,11.1929522 L11.1892146,11.189314 L11.189315,6.07541386 C11.189315,5.85154942 11.280054,5.64887821 11.4267591,5.50217311 C11.5734642,5.35546801 11.7761354,5.26472902 11.9999998,5.26472902 C12.2238643,5.26472902 12.4265357,5.35546784 12.5732408,5.50217294 Z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="topics_two">
+                        <div class="subscribe_tab">
+                            <div class="image_section">
+                                <img src="images/trends.png" alt="" width="35px">
+                            </div>
+                            <div class="about_card">
+                                <p class="about_pitch">
+                                    <strong class="pitch_topic">Trends</strong>
+                                    The latest data-backed business trends
+                                </p>
+                            </div>
+                            <span class="check_uncheck">
+                                <svg viewbox="0 0 24 24" width="32" style="color:white;">
+                                    <path
+                                        d="M12,2 C6.47715282,2 2,6.47715282 2,12 C2,17.5228475 6.47715282,22 12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.47715282 17.5228475,2 12,2 Z M12.5732408,5.50217294 C12.6754446,5.60437683 12.7504465,5.73375106 12.7865767,5.87850748 L12.8062035,5.98977476 L12.8106631,11.1892149 L17.9245861,11.1893153 C18.1324616,11.1893153 18.3220469,11.2675774 18.4655422,11.3961919 C18.6106148,11.5262203 18.7083987,11.7078046 18.7306614,11.9120202 C18.7345587,12.1926644 18.64708,12.3999289 18.5138568,12.5485403 C18.4082566,12.666338 18.2722656,12.7489248 18.1194031,12.7869912 L18.001804,12.8070481 L12.8107852,12.8106862 L12.8106847,17.9245865 C12.8106847,18.1484509 12.7199457,18.3511221 12.5732406,18.4978272 C12.4265355,18.6445323 12.2238642,18.7352713 11.9999999,18.7352713 C11.7761354,18.7352713 11.5734644,18.6445322 11.4267592,18.4978271 C11.3245554,18.3956232 11.2495533,18.2662491 11.213423,18.1214928 L11.1937962,18.0102256 L11.1893366,12.8107854 L6.07541354,12.810685 C5.86753809,12.810685 5.67795278,12.732423 5.53445751,12.6038084 C5.38938491,12.4737801 5.29160102,12.2921958 5.26933824,12.0879801 C5.265441,11.807336 5.35291965,11.6000714 5.48614291,11.45146 C5.59174308,11.3336623 5.72773402,11.2510756 5.88059658,11.2130091 L5.99819569,11.1929522 L11.1892146,11.189314 L11.189315,6.07541386 C11.189315,5.85154942 11.280054,5.64887821 11.4267591,5.50217311 C11.5734642,5.35546801 11.7761354,5.26472902 11.9999998,5.26472902 C12.2238643,5.26472902 12.4265357,5.35546784 12.5732408,5.50217294 Z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="subscribe_tab">
+                            <div class="image_section">
+                                <img src="images/mindstream.png" alt="" width="35px">
+                            </div>
+                            <div class="about_card">
+                                <p class="about_pitch">
+                                    <strong class="pitch_topic">Mindstream</strong>
+                                    Stay up to date on the latest AI news
+                                </p>
+                            </div>
+                            <span class="check_uncheck">
+                                <svg viewbox="0 0 24 24" width="32" style="color:white;">
+                                    <path
+                                        d="M12,2 C6.47715282,2 2,6.47715282 2,12 C2,17.5228475 6.47715282,22 12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.47715282 17.5228475,2 12,2 Z M12.5732408,5.50217294 C12.6754446,5.60437683 12.7504465,5.73375106 12.7865767,5.87850748 L12.8062035,5.98977476 L12.8106631,11.1892149 L17.9245861,11.1893153 C18.1324616,11.1893153 18.3220469,11.2675774 18.4655422,11.3961919 C18.6106148,11.5262203 18.7083987,11.7078046 18.7306614,11.9120202 C18.7345587,12.1926644 18.64708,12.3999289 18.5138568,12.5485403 C18.4082566,12.666338 18.2722656,12.7489248 18.1194031,12.7869912 L18.001804,12.8070481 L12.8107852,12.8106862 L12.8106847,17.9245865 C12.8106847,18.1484509 12.7199457,18.3511221 12.5732406,18.4978272 C12.4265355,18.6445323 12.2238642,18.7352713 11.9999999,18.7352713 C11.7761354,18.7352713 11.5734644,18.6445322 11.4267592,18.4978271 C11.3245554,18.3956232 11.2495533,18.2662491 11.213423,18.1214928 L11.1937962,18.0102256 L11.1893366,12.8107854 L6.07541354,12.810685 C5.86753809,12.810685 5.67795278,12.732423 5.53445751,12.6038084 C5.38938491,12.4737801 5.29160102,12.2921958 5.26933824,12.0879801 C5.265441,11.807336 5.35291965,11.6000714 5.48614291,11.45146 C5.59174308,11.3336623 5.72773402,11.2510756 5.88059658,11.2130091 L5.99819569,11.1929522 L11.1892146,11.189314 L11.189315,6.07541386 C11.189315,5.85154942 11.280054,5.64887821 11.4267591,5.50217311 C11.5734642,5.35546801 11.7761354,5.26472902 11.9999998,5.26472902 C12.2238643,5.26472902 12.4265357,5.35546784 12.5732408,5.50217294 Z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="add_user_details">
+                        <div class="user_details_wrapper">
+                            <div class="email_section">
+                                <legend class="email_address">Email address</legend>
+                                <input type="text" class="input_email" placeholder="Your email address">
+                            </div>
+                            <button class="subscribe_button">
+                                <span class="cta">Subscribe</span>
+                            </button>
+                            <div class="after_text">
+                                <p class="notice_information">
+                                    We're committed to your privacy. HubSpot uses the information you provide to us to
+                                    contact you about our relevant content, products, and services. You may unsubscribe
+                                    from
+                                    these communications at any time. For more information, check out our <a
+                                        href="#">privacy policy</a>.
+                                </p>
+                                <p class="recaptcha_text">
+                                    This form is protected by reCAPTCHA and the Google <a href="">Privacy Policy</a> and
+                                    <a href="">Terms of Service</a>
+                                    apply.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <footer class="page_footer">
+            <div class="footer_wrapper">
+                <section class="list_section">
+                    <div class="left_list">
+                        <legend class="list_name">Popular Features</legend>
+                        <div class="left_list_wrapper">
+                            <div class="first_left_list">
+                                <ul>
+                                    <li><a href="#">All Products and Features</a></li>
+                                    <li><a href="#">Free Meeting Scheduler App</a></li>
+                                    <li><a href="#">Breeze AI Tools</a></li>
+                                    <li><a href="#">Email Tracking Software</a></li>
+                                    <li><a href="#">AI Content Writer</a></li>
+                                    <li><a href="#">AI Website Generator</a></li>
+                                    <li><a href="#">Email Marketing Software</a></li>
+                                    <li><a href="#">Lead Management Software</a></li>
+                                </ul>
+                            </div>
+                            <div class="second_left_list">
+                                <ul>
+                                    <li><a href="#">AI Email Writer</a></li>
+                                    <li><a href="#">Free Website Builder</a></li>
+                                    <li><a href="#">Sales Email Templates</a></li>
+                                    <li><a href="#">Free Online Form Builder</a></li>
+                                    <li><a href="#">Free Chatbot Builder</a></li>
+                                    <li><a href="#">Free Live Chat Software</a></li>
+                                    <li><a href="#">Marketing Analytics</a></li>
+                                    <li><a href="#">Free Landing Page Builder</a></li>
+                                    <li><a href="#">Free Web Hosting</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_list">
+                        <div class="first_right_list">
+                            <legend class="list_name">Free Tools</legend>
+                            <ul>
+                                <li><a href="#">See All Free Business Tools</a></li>
+                                <li><a href="#">AI Search Grader</a></li>
+                                <li><a href="#">Clip Creator</a></li>
+                                <li><a href="#">Website Grader</a></li>
+                                <li><a href="#">Make My Persona</a></li>
+                                <li><a href="#">Email Signature Generator</a></li>
+                                <li><a href="#">Brand Kit Generator</a></li>
+                                <li><a href="#">Blog Ideas Generator</a></li>
+                                <li><a href="#">Invoice Generator</a></li>
+                                <li><a href="#">Free Business Templates</a></li>
+                                <li><a href="#">Guide Creator</a></li>
+                                <li><a href="#">Software Comparisons Library</a></li>
+                                <li><a href="#">Template Marketplace</a></li>
+                                <li><a href="#">Campaign Assistant</a></li>
+                                <li><a href="#">Landing Page Creator</a></li>
+                            </ul>
+                        </div>
+                        <div class="second_right_list">
+                            <legend class="list_name">Company</legend>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Management Team</a></li>
+                                <li><a href="#">Board of Directors</a></li>
+                                <li><a href="#">Investor Relations</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="third_right_list">
+                            <div class="third_first">
+                                <legend class="list_name">Customers</legend>
+                                <ul>
+                                    <li><a href="#">Customer Support</a></li>
+                                    <li><a href="#">Join a Local User Group</a></li>
+                                </ul>
+                            </div>
+                            <div class="third_second">
+                                <legend class="list_name">Partners</legend>
+                                <ul>
+                                    <li><a href="#">All Partner Programs</a></li>
+                                    <li><a href="#">Solutions Partner Program</a></li>
+                                    <li><a href="#">App Partner Program</a></li>
+                                    <li><a href="#">HubSpot for Startups</a></li>
+                                    <li><a href="#">Affiliate Program</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="logos_section">
+                    <nav class="logos">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <svg viewbox="0 0 15.18 30">
+                                        <path
+                                            d="M14.66,10.81H10.15V7.88c.33-2.81,5-2.27,5-2.27V.76h0c-.16,0-9.22-2.19-11,4.7h0a35.46,35.46,0,0,0-.28,5.35H0v5.28H4.1V30.43h6V16.09h4.57l.52-5.28Z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg viewbox="0 0 29.98 30">
+                                        <path
+                                            d="M14.63.09c-3.72,0-4.25,0-5.84.09A10.83,10.83,0,0,0,5.15.87,7.62,7.62,0,0,0,.78,5.24,10.78,10.78,0,0,0,.09,8.88C0,10.47,0,11,0,15s0,4.57.09,6.17a11.08,11.08,0,0,0,.69,3.64,7.65,7.65,0,0,0,4.37,4.37,11.08,11.08,0,0,0,3.64.69c1.6.07,2.1.09,6.17.09s4.57,0,6.16-.09a10.78,10.78,0,0,0,3.64-.69,7.62,7.62,0,0,0,4.37-4.37,10.81,10.81,0,0,0,.76-3.63c.07-1.55.09-2.07.09-5.84v-.75c0-3.72,0-4.25-.09-5.84a10.83,10.83,0,0,0-.69-3.64A7.65,7.65,0,0,0,24.83.78,10.83,10.83,0,0,0,21.19.09C19.64,0,19.12,0,15.35,0Zm10.16,7A1.8,1.8,0,1,1,23,5.27a1.81,1.81,0,0,1,1.8,1.79ZM15,20a5,5,0,1,1,5-5,5,5,0,0,1-5,5ZM15,7.38a7.69,7.69,0,1,1-7.68,7.68A7.68,7.68,0,0,1,15,7.38ZM15,2.8c4,0,4.48,0,6.05.08a8.5,8.5,0,0,1,2.78.52,5,5,0,0,1,2.85,2.85A8.14,8.14,0,0,1,27.23,9c.07,1.58.09,2.06.09,6.05s0,4.48-.09,6.05a8.24,8.24,0,0,1-.51,2.78,5,5,0,0,1-2.85,2.84,8.24,8.24,0,0,1-2.78.51c-1.57.07-2,.09-6.05.09s-4.47,0-6-.09a8.18,8.18,0,0,1-2.77-.51A5,5,0,0,1,3.38,23.9a8.5,8.5,0,0,1-.52-2.78c-.06-1.57-.08-2.05-.08-6.05s0-4.47.08-6.05a8.4,8.4,0,0,1,.52-2.77A5,5,0,0,1,6.22,3.4,8.44,8.44,0,0,1,9,2.88c1.54-.08,2-.09,6-.09Z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg viewbox="0 0 30 21.69">
+                                        <path
+                                            d="M29.72,5c-.25-2.19-.78-2.82-1.15-3.12a6.14,6.14,0,0,0-3.11-.72C23.15,1,19.24.86,15,.86S6.85.94,4.54,1.11a6.12,6.12,0,0,0-3.11.72c-.37.3-.9,1-1.15,3.12a82.23,82.23,0,0,0,0,13.5c.25,2.19.78,2.82,1.15,3.12a6.12,6.12,0,0,0,3.11.72c2.31.16,6.22.25,10.46.25s8.16-.09,10.46-.25a6.12,6.12,0,0,0,3.11-.72c.37-.3.9-1,1.15-3.12a82.23,82.23,0,0,0,0-13.5ZM11.37,16.42h0V7l9.05,4.72Z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg viewbox="0 0 24 24">
+                                        <path
+                                            d="M14.2361 10.1624L22.9786 0H20.9069L13.3158 8.82384L7.25289 0H0.259995L9.42836 13.3432L0.259995 24H2.33179L10.3481 14.6817L16.751 24H23.7439L14.2356 10.1624H14.2361ZM11.3985 13.4608L10.4696 12.1321L3.07828 1.55962H6.26043L12.2253 10.0919L13.1542 11.4206L20.9079 22.5113H17.7257L11.3985 13.4613V13.4608Z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg viewbox="0 0 30 29.92">
+                                        <path
+                                            d="M6.83,30.86H.68V10.91H6.85v20ZM3.71,8.3h0A3.68,3.68,0,1,1,7.36,4.61,3.68,3.68,0,0,1,3.71,8.3ZM30,30.86H23.83V20.38c0-2.87-1.09-4.48-3.36-4.48-2.48,0-3.76,1.67-3.76,4.48V30.86H10.78V10.91H16.7v2.68a7,7,0,0,1,6-3.27c4.22,0,7.25,2.58,7.25,7.93Z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg viewbox="0 0 29.8 25.26">
+                                        <path
+                                            d="M29.68,5.44h0l-9-4.58h-.47a1.35,1.35,0,0,0-.95.47L14.21,9.7l6.47,10.58,9-14.84C29.84,5.59,29.84,5.44,29.68,5.44Z">
+                                        </path>
+                                        <polygon points="11.37 6.95 11.37 16.58 19.89 20.84 11.37 6.95"></polygon>
+                                        <path d="M21.16,22.33l7,3.47c.94.48,1.57.16,1.57-.79V8.28Z"></path>
+                                        <path
+                                            d="M10,5.44,1.11,1.17A.59.59,0,0,0,.63,1,.73.73,0,0,0,0,1.8v19A1.4,1.4,0,0,0,.79,22L8.53,26a1.16,1.16,0,0,0,.63.16c.47,0,.79-.32.79-.95V5.44Z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg viewbox="0 0 22 22">
+                                        <path
+                                            d="M20.65498,5.50753c-1.2564,0-2.41815-0.41737-3.34754-1.11872 c-1.06708-0.80462-1.83728-1.98787-2.10835-3.34755C15.13024,0.70565,15.09582,0.35713,15.09151,0h-3.5928v9.81459l-0.0043,5.37414 c0,1.43712-0.938,2.6548-2.23313,3.08508c-0.37864,0.12478-0.7831,0.18502-1.20477,0.1592 c-0.54215-0.03012-1.04557-0.19362-1.48875-0.45609c-0.938-0.55936-1.57051-1.57481-1.58772-2.74086 c-0.02582-1.81576,1.44142-3.30021,3.25719-3.30021c0.35713,0,0.70135,0.06024,1.02406,0.1635V9.41874V8.45922 C8.92136,8.40759,8.57714,8.38177,8.22431,8.38177c-1.98787,0-3.84666,0.82613-5.17622,2.31488 c-1.00254,1.12302-1.60493,2.56014-1.69959,4.06611c-0.12048,1.97497,0.60239,3.85527,2.00508,5.24076 c0.20653,0.20223,0.42167,0.39155,0.64972,0.56796C5.20378,21.49658,6.67532,22,8.22431,22 c0.34852,0,0.69705-0.02582,1.03696-0.07745c1.44573-0.21514,2.77958-0.87776,3.83376-1.91903 c1.29513-1.27792,2.00939-2.97751,2.01799-4.78467l-0.01721-8.02895c0.61529,0.47761,1.29083,0.86916,2.01799,1.17465 c1.12732,0.47761,2.32349,0.71426,3.54978,0.71426V6.47135V5.50323C20.66789,5.50753,20.65498,5.50753,20.65498,5.50753 L20.65498,5.50753z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="links_section">
+                    <div class="copyright_wrapper">
+                        <div class="copyright_logo">
+                            <a href="#">
+                                <img src="images/wordmark-white.svg" alt="">
+                            </a>
+                        </div>
+                        <p class="copyright_details">Copyright © 2024 HubSpot, Inc.</p>
+                    </div>
+                    <nav class="links">
+                        <ul>
+                            <li id="no_border"><a href="#">Legal Stuff</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Security</a></li>
+                            <li><a href="#">Website Accessibility</a></li>
+                            <li><a href="#">Manage Cookies</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
+        </footer> -->
+
+        <!-- <div id="card_wrapper">
+            <div id="card_image_wrapper">
+                <img src="https://www.hubspot.com/hubfs/EN-Blog-IG%20Marketing.png" alt="">
+            </div>
+            <div id="card_text_wrapper">
+                <h3>Internet Marketing</h3>
+                <svg id="cl-icon-right" viewBox="0 0 32 32">
+                        <path d="M23.33 15a1.78 1.78 0 00-.17-.27l-.1-.16v-.07l-10.51-11a1.56 1.56 0 00-1.11-.45 1.58 1.58 0 00-1.21 2.59l9.47 9.96-9.47 10a1.59 1.59 0 001 2.77 1.59 1.59 0 001.23-.6L23 16.72v-.07l.1-.16a2.33 2.33 0 00.17-.26 1.15 1.15 0 00.06-.28 1.34 1.34 0 000-.3 1.54 1.54 0 000-.31v-.06a2.28 2.28 0 000-.26z"></path>
+                </svg>
+            </div>
+        </div> -->
+
+        <!-- <div id="section_wrapper">
+            <section id="website">
+                <header>
+                    <h2>Website</h2>
+                    <hr>
+                    <a href="#">See more website articles</a>
+                </header>
+                <main id="section_body">
+                    <div id="left_body_section">
+                        <img src="https://knowledge.hubspot.com/hs-fs/hubfs/letterhead-examples-1-20241031-2880782.webp?noresize&width=344&height=450&name=letterhead-examples-1-20241031-2880782.webp"
+                            alt="women deigns a letterhead example online" width="512" height="320">
+                        <div class="card_details_wrapper">
+                            <h3>15 Letterhead Examples With Logos To Inspire Yours</h3>
+                            <p>
+                                Explore some of our favorite letterhead examples to inspire your own designs, and learn ho...
+                            </p>
+                            <div class="article_author_date">
+                                <p>Cassie Wilson</p>
+                                <p>11/4/24</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="right_body_section">
+                        <nav>
+                            <div class="card_details_wrapper">
+                                <h3>Getting a 413 Status Code? Here’s My Guide to Fixing the Error</h3>
+                                <div class="article_author_date">
+                                    <p>Jamie Juviler</p>
+                                    <p>11/4/24</p>
+                                </div>
+                            </div>
+                            <div class="card_details_wrapper">
+                                <h3>15 Best HTML & CSS Code Editors for 2024</h3>
+                                <div class="article_author_date">
+                                    <p>Anna Fitzgerald</p>
+                                    <p>11/4/24</p>
+                                </div>
+                            </div>
+                            <div class="card_details_wrapper">
+                                <h3>How to Convert Your Wix Site to WordPress: A Start-to-Finish Guide</h3>
+                                <div class="article_author_date">
+                                    <p>Anna Fitzgerald</p>
+                                    <p>11/4/24</p>
+                                </div>
+                            </div>
+                            <div class="card_details_wrapper">
+                                <h3>Serverless Functions: Your Website's New Best Friend</h3>
+                                <div class="article_author_date">
+                                    <p>Anna Fitzgerald</p>
+                                    <p>11/4/24</p>
+                                </div>
+                            </div>
+                            <div class="card_details_wrapper">
+                                <h3>Digital Experience Platform (DXP) vs. Content Management System (CMS): Key Diffe...</h3>
+                                <div class="article_author_date">
+                                    <p>Stephanie Trovato</p>
+                                    <p>10/31/24</p>
+                                </div>
+                            </div>
+                        </nav>
+                    </div> -->
+
+        <div id="network_section_wrapper">
+            <section id="network_section">
+                <header>
+                    <h2>From the HubSpot Podcast Network</h2>
+                </header>
+                <main>
+                    <div id="card_wrapper">
+                        <div class="nav_key" id="nav_key_left">
+                            <button>
+                                <svg id="cl-icon-left" viewBox="0 0 32 32">
+                                    <path
+                                        d="M18.08 3.8a1.6 1.6 0 00-2.23.05l-10.51 11v.07l-.1.16a1 1 0 00-.16.26 1.15 1.15 0 00-.06.28H5a2.18 2.18 0 000 .29 2.87 2.87 0 000 .31 1.59 1.59 0 00.06.3 1.78 1.78 0 00.17.27l.1.16V17l10.52 11a1.59 1.59 0 002.82-1 1.57 1.57 0 00-.54-1.18l-9.47-9.89L18.13 6a1.58 1.58 0 00.42-1.07 1.55 1.55 0 00-.47-1.11z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div id="card_grid">
+                            <ul>
+                                <li class="card_holder">
+                                    <div class="card">
+                                        <p>The Sales Evangelist</p>
+                                        <img src="https://www.hubspot.com/hs-fs/hubfs/The%20Sales%20Evangelist.png? height=240&name=The%20Sales%20Evangelist.png"
+                                            alt="The Sales Evangelist Podcast Cover">
+                                        <div class="img_details">
+                                            <p>5 Ways To Do Daily Outbound With LinkedIn</p>
+                                            <div class="details_card">
+                                                <p>
+                                                    <svg style="width:16px; height:16px;" viewBox="0 0 32 32">
+                                                        <path
+                                                            d="M4.69,4.69C7.69,1.69,11.76,0,16,0s8.31,1.69,11.31,4.69c3,3,4.69,7.07,4.69,11.31s-1.69,8.31-4.69,11.31c-3,3-7.07,4.69-11.31,4.69s-8.31-1.69-11.31-4.69C1.69,24.31,0,20.24,0,16S1.69,7.69,4.69,4.69Zm9.14,15.96l6.67-4.23h0c.13-.08,.22-.24,.22-.41s-.08-.33-.22-.41h0s-6.67-4.23-6.67-4.23c-.13-.08-.3-.08-.43,0-.13,.09-.22,.24-.22,.41v8.46c0,.17,.08,.33,.22,.41,.13,.08,.3,.08,.43,0Z"
+                                                            fill-rule="evenodd"></path>
+                                                    </svg>
+                                                    25 min listen
+                                                </p>
+                                                <p>Updated 10/31/23</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card_holder">
+                                    <div class="card">
+                                        <p>Business Made Simple</p>
+                                        <img src="https://www.hubspot.com/hs-fs/hubfs/PodcastCovers23-4.png?height=240& name=PodcastCovers23-4.png"
+                                            alt="Business Made Simple Podcast cover">
+                                        <div class="img_details">
+                                            <p>Your Website Probably Stinks—Here’s How to Fix It!</p>
+                                            <div class="details_card">
+                                                <p>
+                                                    <svg style="width:16px; height:16px;" viewBox="0 0 32 32">
+                                                        <path
+                                                            d="M4.69,4.69C7.69,1.69,11.76,0,16,0s8.31,1.69,11.31,4.69c3,3,4.69,7.07,4.69,11.31s-1.69,8.31-4.69,11.31c-3,3-7.07,4.69-11.31,4.69s-8.31-1.69-11.31-4.69C1.69,24.31,0,20.24,0,16S1.69,7.69,4.69,4.69Zm9.14,15.96l6.67-4.23h0c.13-.08,.22-.24,.22-.41s-.08-.33-.22-.41h0s-6.67-4.23-6.67-4.23c-.13-.08-.3-.08-.43,0-.13,.09-.22,.24-.22,.41v8.46c0,.17,.08,.33,.22,.41,.13,.08,.3,.08,.43,0Z"
+                                                            fill-rule="evenodd"></path>
+                                                    </svg>
+                                                    36 min listen
+                                                </p>
+                                                <p>Updated 10/31/23</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card_holder">
+                                    <div class="card">
+                                        <p>The Science of Scaling</p>
+                                        <img src="https://www.hubspot.com/hs-fs/hubfs/Science%20of%20Scaling-V4-300-2.png?height=240&name=Science%20of%20Scaling-V4-300-2.png"
+                                            alt="The Science of Scaling Podcast Cover">
+                                        <div class="img_details">
+                                            <p>How to Scale a Billion Dollar Sales Team w/ John McMahon (Board Member,
+                                                Snowflake)</p>
+                                            <div class="details_card">
+                                                <p>
+                                                    <svg style="width:16px; height:16px;" viewBox="0 0 32 32">
+                                                        <path
+                                                            d="M4.69,4.69C7.69,1.69,11.76,0,16,0s8.31,1.69,11.31,4.69c3,3,4.69,7.07,4.69,11.31s-1.69,8.31-4.69,11.31c-3,3-7.07,4.69-11.31,4.69s-8.31-1.69-11.31-4.69C1.69,24.31,0,20.24,0,16S1.69,7.69,4.69,4.69Zm9.14,15.96l6.67-4.23h0c.13-.08,.22-.24,.22-.41s-.08-.33-.22-.41h0s-6.67-4.23-6.67-4.23c-.13-.08-.3-.08-.43,0-.13,.09-.22,.24-.22,.41v8.46c0,.17,.08,.33,.22,.41,.13,.08,.3,.08,.43,0Z"
+                                                            fill-rule="evenodd"></path>
+                                                    </svg>
+                                                    10 min listen
+                                                </p>
+                                                <p>Updated 10/31/23</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card_holder">
+                                    <div class="card">
+                                        <p>Truth, Lies and Workplace Culture</p>
+                                        <img src="https://www.hubspot.com/hs-fs/hubfs/PodcastCovers23%20(1)-2.png?height=240&name=PodcastCovers23%20(1)-2.png"
+                                            alt="Truth, Lies and Workplace Culture Podcast Cover">
+                                        <div class="img_details">
+                                            <p>From Bystander to Ally: How to Avoid DEIB Washing</p>
+                                            <div class="details_card">
+                                                <p>
+                                                    <svg style="width:16px; height:16px;" viewBox="0 0 32 32">
+                                                        <path
+                                                            d="M4.69,4.69C7.69,1.69,11.76,0,16,0s8.31,1.69,11.31,4.69c3,3,4.69,7.07,4.69,11.31s-1.69,8.31-4.69,11.31c-3,3-7.07,4.69-11.31,4.69s-8.31-1.69-11.31-4.69C1.69,24.31,0,20.24,0,16S1.69,7.69,4.69,4.69Zm9.14,15.96l6.67-4.23h0c.13-.08,.22-.24,.22-.41s-.08-.33-.22-.41h0s-6.67-4.23-6.67-4.23c-.13-.08-.3-.08-.43,0-.13,.09-.22,.24-.22,.41v8.46c0,.17,.08,.33,.22,.41,.13,.08,.3,.08,.43,0Z"
+                                                            fill-rule="evenodd"></path>
+                                                    </svg>
+                                                    8 min listen
+                                                </p>
+                                                <p>Updated 10/31/23</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card_holder">
+                                    <div class="card">
+                                        <p>Imperfect Action</p>
+                                        <img src="https://www.hubspot.com/hs-fs/hubfs/PodcastCovers23%20(4)-2.png?height=240&name=PodcastCovers23%20(4)-2.png"
+                                            alt="Imperfect Action Podcast Cover">
+                                        <div class="img_details">
+                                            <p>The art of the post-launch review: 5 questions to make your next launch a
+                                                success</p>
+                                            <div class="details_card">
+                                                <p>
+                                                    <svg style="width:16px; height:16px;" viewBox="0 0 32 32">
+                                                        <path
+                                                            d="M4.69,4.69C7.69,1.69,11.76,0,16,0s8.31,1.69,11.31,4.69c3,3,4.69,7.07,4.69,11.31s-1.69,8.31-4.69,11.31c-3,3-7.07,4.69-11.31,4.69s-8.31-1.69-11.31-4.69C1.69,24.31,0,20.24,0,16S1.69,7.69,4.69,4.69Zm9.14,15.96l6.67-4.23h0c.13-.08,.22-.24,.22-.41s-.08-.33-.22-.41h0s-6.67-4.23-6.67-4.23c-.13-.08-.3-.08-.43,0-.13,.09-.22,.24-.22,.41v8.46c0,.17,.08,.33,.22,.41,.13,.08,.3,.08,.43,0Z"
+                                                            fill-rule="evenodd"></path>
+                                                    </svg>
+                                                    41 min listen
+                                                </p>
+                                                <p>Updated 10/31/23</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card_holder">
+                                    <div class="card">
+                                        <p>Latinx In Power</p>
+                                        <img src="https://www.hubspot.com/hs-fs/hubfs/PodcastCovers23%20(6).png?height=240&name=PodcastCovers23%20(6).png"
+                                            alt="Latinx In Power Podcast Cover">
+                                        <div class="img_details">
+                                            <p>Harnessing the Power of Silence in Negotiation with Diana Kleps</p>
+                                            <div class="details_card">
+                                                <p>
+                                                    <svg style="width:16px; height:16px;" viewBox="0 0 32 32">
+                                                        <path
+                                                            d="M4.69,4.69C7.69,1.69,11.76,0,16,0s8.31,1.69,11.31,4.69c3,3,4.69,7.07,4.69,11.31s-1.69,8.31-4.69,11.31c-3,3-7.07,4.69-11.31,4.69s-8.31-1.69-11.31-4.69C1.69,24.31,0,20.24,0,16S1.69,7.69,4.69,4.69Zm9.14,15.96l6.67-4.23h0c.13-.08,.22-.24,.22-.41s-.08-.33-.22-.41h0s-6.67-4.23-6.67-4.23c-.13-.08-.3-.08-.43,0-.13,.09-.22,.24-.22,.41v8.46c0,.17,.08,.33,.22,.41,.13,.08,.3,.08,.43,0Z"
+                                                            fill-rule="evenodd"></path>
+                                                    </svg>
+                                                    43 min listen
+                                                </p>
+                                                <p>Updated 10/31/23</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav_key" id="nav_key_right">
+                            <button>
+                                <svg id="cl-icon-right" viewBox="0 0 32 32">
+                                    <path
+                                        d="M23.33 15a1.78 1.78 0 00-.17-.27l-.1-.16v-.07l-10.51-11a1.56 1.56 0 00-1.11-.45 1.58 1.58 0 00-1.21 2.59l9.47 9.96-9.47 10a1.59 1.59 0 001 2.77 1.59 1.59 0 001.23-.6L23 16.72v-.07l.1-.16a2.33 2.33 0 00.17-.26 1.15 1.15 0 00.06-.28 1.34 1.34 0 000-.3 1.54 1.54 0 000-.31v-.06a2.28 2.28 0 000-.26z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </main>
+            </section>
+        </div>
+
+    </main>
+    </section>
+    </div>
+
+    </main>
+</body>
+
+</html>
