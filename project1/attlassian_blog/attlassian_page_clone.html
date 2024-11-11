@@ -1,0 +1,715 @@
+<!-- 
+ Structure
+ header>logo+nav
+ aside>nav
+ main>htags+internal_navs+articles
+ footer>3sections
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merging vs. Rebasing | Atlassian Git Tutorial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header id="doc_header">
+        <div id="wrapper_doc_header">
+            <div id="logo_wrapper">
+                <img src="images/AtlassianHeaderLogo.svg" alt="header logo" id="logo">
+            </div>
+            <nav id="site_nav">
+                <ul>
+                    <li>
+                        Products
+                        <svg class="desktop" width="11" height="6" viewBox="0 0 11 6" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.19995 1.18182L5.19995 4.81818L1.19995 1.18182" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </li>
+                    <li>
+                        Teams
+                        <svg class="desktop" width="11" height="6" viewBox="0 0 11 6" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.19995 1.18182L5.19995 4.81818L1.19995 1.18182" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </li>
+                    <li>
+                        Why Atlassian
+                        <svg class="desktop" width="11" height="6" viewBox="0 0 11 6" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.19995 1.18182L5.19995 4.81818L1.19995 1.18182" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </li>
+                    <li>
+                        Resources
+                        <svg class="desktop" width="11" height="6" viewBox="0 0 11 6" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.19995 1.18182L5.19995 4.81818L1.19995 1.18182" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </li>
+                    <li>
+                        Enterprise
+                        <svg class="desktop" width="11" height="6" viewBox="0 0 11 6" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.19995 1.18182L5.19995 4.81818L1.19995 1.18182" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </li>
+                </ul>
+            </nav>
+            <div id="member_links">
+                <div class="links_group_wrapper">
+                    <a href="#" id="try_now">Try now</a>
+                    <div>
+                        <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.8422 17.189L19.0001 20.3469" stroke="currentColor" stroke-width="2.75"
+                                stroke-linecap="round"></path>
+                            <path
+                                d="M9.59182 17.7583C14.0392 17.7583 17.6444 14.1531 17.6444 9.70571C17.6444 5.25836 14.0392 1.65308 9.59182 1.65308C5.14447 1.65308 1.53918 5.25836 1.53918 9.70571C1.53918 14.1531 5.14447 17.7583 9.59182 17.7583Z"
+                                stroke="currentColor" stroke-width="2.25"></path>
+                        </svg>
+                    </div>
+                </div>
+                <a href="#" id="sign_in">Sign In</a>
+            </div>
+        </div>
+    </header>
+    <div id="main_content_wrapper">
+        <aside>
+            <nav class="nav_content_wrapper">
+                <section class="nav_content_section">
+                    <header class="nav_section_display">Learn Git</header>
+                    <ul class="nav_section_collapsible">
+                        <li class="collapsable">Git commands</li>
+                        <li class="collapsable">Learn Git with Bitbucket Cloud</li>
+                        <li class="collapsable">Learn about code review in Bitbucket Cloud</li>
+                        <li class="collapsable">Learn Branching with Bitbucket Cloud</li>
+                        <li class="collapsable">Learn Undoing Changes with Bitbucket Cloud</li>
+                    </ul>
+                </section>
+                <section class="nav_content_section">
+                    <header class="nav_section_display">Beginner</header>
+                    <ul class="nav_section_collapsible">
+                        <li class="collapsable">What is version control</li>
+                        <li class="collapsable">Source Code Management</li>
+                        <li class="collapsable">What is Git</li>
+                        <li class="collapsable">Why Git for your organization</li>
+                        <li class="collapsable">Install Git</li>
+                        <li class="collapsable">Git SSH</li>
+                        <li class="collapsable">Git archive</li>
+                        <li class="collapsable">GitOps</li>
+                        <li class="collapsable">Git cheat sheet</li>
+                    </ul>
+                </section>
+                <section class="nav_content_section">
+                    <header class="nav_section_display">Getting started</header>
+                    <ul class="nav_section_collapsible">
+                        <li class="collapsable">Setting up a repository</li>
+                        <li class="collapsable">git init</li>
+                        <li class="collapsable">git clone</li>
+                        <li class="collapsable">git config</li>
+                        <li class="collapsable">git alias</li>
+                        <li class="collapsable">Saving changes (Git add)</li>
+                        <li class="collapsable">git commit</li>
+                        <li class="collapsable">git diff</li>
+                        <li class="collapsable">git stash</li>
+                        <li class="collapsable">.gitignore</li>
+                        <li class="collapsable">Inspecting a repository</li>
+                        <li class="collapsable">git tag</li>
+                        <li class="collapsable">git blame</li>
+                        <li class="collapsable">Undoing changes</li>
+                        <li class="collapsable">git clean</li>
+                        <li class="collapsable">git revert</li>
+                        <li class="collapsable">git reset</li>
+                        <li class="collapsable">git rm</li>
+                        <li class="collapsable">Rewriting history</li>
+                        <li class="collapsable">git rebase</li>
+                        <li class="collapsable">git reflog</li>
+                    </ul>
+                </section>
+                <section class="nav_content_section">
+                    <header class="nav_section_display">Collaborating workflows</header>
+                    <ul class="nav_section_collapsible">
+                        <li class="collapsable">Syncing (git remote)</li>
+                        <li class="collapsable">git fetch</li>
+                        <li class="collapsable">git push</li>
+                        <li class="collapsable">git pull</li>
+                        <li class="collapsable">Making a Pull Request</li>
+                        <li class="collapsable">Using Branches (Git branch)</li>
+                        <li class="collapsable">git checkout</li>
+                        <li class="collapsable">git merge</li>
+                        <li class="collapsable">Merge conflicts</li>
+                        <li class="collapsable">Merge strategies</li>
+                        <li class="collapsable">Comparing Workflows</li>
+                        <li class="collapsable">Feature Branch Workflow</li>
+                        <li class="collapsable">Gitflow Workflow</li>
+                        <li class="collapsable">Forking Workflow</li>
+                    </ul>
+                </section>
+                <section class="nav_content_section">
+                    <header class="nav_section_display">Migrating to Git</header>
+                    <ul class="nav_section_collapsible">
+                        <li class="collapsable">SVN to Git - prepping for the migration</li>
+                        <li class="collapsable">Migrate to Git from SVN</li>
+                        <li class="collapsable">Prepare</li>
+                        <li class="collapsable">Convert</li>
+                        <li class="collapsable">Synchronize</li>
+                        <li class="collapsable">Share</li>
+                        <li class="collapsable">Migrate</li>
+                        <li class="collapsable">Perforce to Git - why to make the move</li>
+                        <li class="collapsable">Migrating from Perforce to Git</li>
+                        <li class="collapsable">Working with Git and Perforce: integration workflow</li>
+                        <li class="collapsable">How to move a Git repository with history</li>
+                    </ul>
+                </section>
+                <section class="nav_content_section">
+                    <header class="nav_section_display">Advanced Tips</header>
+                    <ul class="nav_section_collapsible">
+                        <li class="collapsable">Merging vs. Rebasing</li>
+                        <li class="collapsable">Reset, Checkout, and Revert</li>
+                        <li class="collapsable">Advanced Git log</li>
+                        <li class="collapsable">Git Hooks</li>
+                        <li class="collapsable">Refs and the Reflog</li>
+                        <li class="collapsable">Git submodules</li>
+                        <li class="collapsable">Git subtree</li>
+                        <li class="collapsable">Large repositories in Git</li>
+                        <li class="collapsable">Git LFS</li>
+                        <li class="collapsable">Git gc</li>
+                        <li class="collapsable">Git prune</li>
+                        <li class="collapsable">Git bash</li>
+                        <li class="collapsable">How to store dotfiles</li>
+                        <li class="collapsable">Git cherry pick</li>
+                        <li class="collapsable">GitK</li>
+                        <li class="collapsable">Git-show</li>
+                    </ul>
+                </section>
+                <section class="nav_content_section">
+                    <header class="nav_section_display">Articles</header>
+                    <ul class="nav_section_collapsible">
+                        <li class="collapsable">Dealing with Maven dependencies when switching to Git</li>
+                        <li class="collapsable">Pull request proficiency: Fetching abilities unlocked!</li>
+                        <li class="collapsable">Git and project dependencies</li>
+                        <li class="collapsable">Git or SVN? How Nuance Healthcare Chose a Git Branching Model</li>
+                        <li class="collapsable">Git Forks And Upstreams: How-to and a cool tip</li>
+                        <li class="collapsable">Core concept, workflows and tips</li>
+                    </ul>
+                </section>
+            </nav>
+        </aside>
+        <main>
+            <header id="header_in_main">
+                <h2>Merging vs. rebasing</h2>
+                <detail>The <code class="inline_code">git rebase</code> command has a reputation for being magical Git
+                    hocus
+                    pocus that beginners should stay away from, but it can actually make life much easier for a
+                    development
+                    team when used with care. In this article, we’ll compare <code class="inline_code">git rebase</code>
+                    with the related <code class="inline_code">git merge</code> command and identify all of the
+                    potential
+                    opportunities to incorporate rebasing into the typical Git workflow.</detail>
+            </header>
+            <hr class="main_separator">
+            <section class="section_in_main">
+                <header class="section_header">
+                    <h2>Conceptual Overview</h2>
+                    <hr>
+                </header>
+                <article class="section_article has-cards no_title_article">
+                    <div>
+                        <p>
+                            The first thing to understand about <code class="inline_code">git rebase</code> is that it
+                            solves the same problem as <code class="inline_code">git merge</code>. Both of these
+                            commands
+                            are designed to integrate changes from one branch into another branch—they just do it in
+                            very
+                            different ways.</p>
+                        <p>
+                            Consider what happens when you start working on a new feature in a dedicated branch, then
+                            another team member updates the <code class="inline_code">main</code> branch with new
+                            commits.
+                            This results in a forked history, which should be familiar to anyone who has used Git as a
+                            collaboration tool.</p>
+                        <img src="images/image1.svg" alt="A forked commit history">
+                        <p>
+                            Now, let’s say that the new commits in <code class="inline_code">main</code> are relevant to
+                            the
+                            feature that you’re working on. To incorporate the new commits into your <code
+                                class="inline_code">feature</code> branch, you have two options: merging or rebasing.
+                        </p>
+                    </div>
+                    <div class="card-holder">
+                        <div class="card">
+                            <img src="https://wac-cdn.atlassian.com/dam/jcr:f05d1440-c0ca-45f1-9f31-f376bb67adf6/databases.png?cdnVersion=2416" alt="">
+                            <p>RELATED MATERIAL</p>
+                            <p>How to move a full Git repository</p>
+                            <a href="#">Read article</a>
+                        </div>
+                        <div class="card">
+                            <img src="https://wac-cdn.atlassian.com/dam/jcr:03116c1f-27e5-4a82-9b9b-806786578fb2/logos-bitbucket-icon-gradient-blue-121x109@2x.png?cdnVersion=2416" alt="">
+                            <p>SEE SOLUTION</p>
+                            <p>Learn Git with Bitbucket Cloud</p>
+                            <a href="#">Read tutorial</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="section_article">
+                    <h2>The merge option </h2>
+                    <p>The easiest option is to merge the <code class="inline_code">main</code> branch into the feature
+                        branch using something like the following:</p>
+                    <code class="code_block">git checkout feature<br>git merge main</code>
+                    <p> Or, you can condense this to a one-liner:</p>
+                    <code class="code_block">git merge feature main</code>
+                    <p>This creates a new “merge commit” in the <code class="inline_code">feature</code> branch that
+                        ties
+                        together the histories of both branches, giving you a branch structure that looks like this:</p>
+                    <img src="images/image2.svg" alt="Merging main into feature branch">
+                    <p>
+                        Merging is nice because it’s a non-destructive operation. The existing branches are not changed
+                        in
+                        any way. This avoids all of the potential pitfalls of rebasing (discussed below).
+                    </p>
+                    <p>
+                        On the other hand, this also means that the <code class="inline_code">feature</code> branch will
+                        have an extraneous merge commit every time you need to incorporate upstream changes. If <code
+                            class="inline_code">main</code> is very active, this can pollute your feature branch’s
+                        history
+                        quite a bit. While it’s possible to mitigate this issue with advanced <code
+                            class="inline_code">git log</code> options, it can make it hard for other developers to
+                        understand the history of the project.
+                    </p>
+                </article>
+                <article class="section_article">
+                    <h2>The rebase option</h2>
+                    <p>
+                        As an alternative to merging, you can rebase the feature branch onto main branch using the
+                        following
+                        commands:
+                    </p>
+                    <code class="code_block">git checkout feature<br>git rebase main</code>
+                    <p>This moves the entire feature branch to begin on the tip of the main branch, effectively
+                        incorporating all of the new commits in main. But, instead of using a merge commit, rebasing
+                        re-writes the project history by creating brand new commits for each commit in the original
+                        branch.
+                    </p>
+                    <img src="images/image3.svg" alt="Rebasing feature branch into main">
+                    <p>The major benefit of rebasing is that you get a much cleaner project history. First, it
+                        eliminates
+                        the unnecessary merge commits required by git merge. Second, as you can see in the above
+                        diagram,
+                        rebasing also results in a perfectly linear project history—you can follow the tip of feature
+                        all
+                        the way to the beginning of the project without any forks. This makes it easier to navigate your
+                        project with commands like git log, git bisect, and gitk.</p>
+                    <p>
+                        But, there are two trade-offs for this pristine commit history: safety and traceability. If you
+                        don’t follow the Golden Rule of Rebasing, re-writing project history can be potentially
+                        catastrophic
+                        for your collaboration workflow. And, less importantly, rebasing loses the context provided by a
+                        merge commit—you can’t see when upstream changes were incorporated into the feature.</p>
+                </article>
+                <article class="section_article">
+                    <h2>Interactive rebasing</h2>
+                    <p>Interactive rebasing gives you the opportunity to alter commits as they are moved to the new
+                        branch.
+                        This is even more powerful than an automated rebase, since it offers complete control over the
+                        branch’s commit history. Typically, this is used to clean up a messy history before merging a
+                        feature branch into main.</p>
+                    <br>
+                    <p>To begin an interactive rebasing session, pass the i option to the git rebase command:</p>
+                    <code class="code_block">git checkout feature <br> git rebase -i main</code>
+                    <p>This will open a text editor listing all of the commits that are about to be moved:</p>
+                    <code class="code_block">
+                    pick 33d5b7a Message for commit #1<br>
+                    pick 9480b3d Message for commit #2<br>
+                    pick 5c67e61 Message for commit #3<br>
+                </code>
+                    <p>This listing defines exactly what the branch will look like after the rebase is performed. By
+                        changing the pick command and/or re-ordering the entries, you can make the branch’s history look
+                        like whatever you want. For example, if the 2nd commit fixes a small problem in the 1st commit,
+                        you
+                        can condense them into a single commit with the fixup command:</p>
+                    <code class="code_block">
+                    pick 33d5b7a Message for commit #1<br>
+                    fixup 9480b3d Message for commit #2<br>
+                    pick 5c67e61 Message for commit #3<br>
+                </code>
+                    <br>
+                    <p>When you save and close the file, Git will perform the rebase according to your instructions,
+                        resulting in project history that looks like the following:</p>
+                    <img src="images/image4.svg" alt="Squashing a commit with an interactive rebase">
+                    <p>Eliminating insignificant commits like this makes your feature’s history much easier to
+                        understand.
+                        This is something that git merge simply cannot do.</p>
+                </article>
+            </section>
+            <section class="section_in_main">
+                <header class="section_header">
+                    <h2>The golden rule of rebasing</h2>
+                    <hr>
+                </header>
+                <article class="section_article no_title_article">
+                    <p>Once you understand what rebasing is, the most important thing to learn is when not to do it. The
+                        golden rule of git rebase is to never use it on public branches.</p>
+                    <p>For example, think about what would happen if you rebased main onto your feature branch:</p>
+                    <img src="images/image5.svg" alt="Rebasing the main branch">
+                    <p>The rebase moves all of the commits in main onto the tip of feature. The problem is that this
+                        only happened in your repository. All of the other developers are still working with the
+                        original main. Since rebasing results in brand new commits, Git will think that your main
+                        branch’s history has diverged from everybody else’s.</p>
+                    <p>The only way to synchronize the two main branches is to merge them back together, resulting in an
+                        extra merge commit and two sets of commits that contain the same changes (the original ones, and
+                        the ones from your rebased branch). Needless to say, this is a very confusing situation.</p>
+                    <p>So, before you run git rebase, always ask yourself, “Is anyone else looking at this branch?” If
+                        the answer is yes, take your hands off the keyboard and start thinking about a non-destructive
+                        way to make your changes (e.g., the git revert command). Otherwise, you’re safe to re-write
+                        history as much as you like.</p>
+                </article>
+                <article class="section_article">
+                    <h2>Force-pushing</h2>
+                    <p>If you try to push the rebased main branch back to a remote repository, Git will prevent you from
+                        doing so because it conflicts with the remote main branch. But, you can force the push to go
+                        through by passing the --force flag, like so:</p>
+                    <code class="code_block"># Be very careful with this command! git push --force</code>
+                    <p>This overwrites the remote main branch to match the rebased one from your repository and makes
+                        things very confusing for the rest of your team. So, be very careful to use this command only
+                        when you know exactly what you’re doing.</p>
+                    <p>One of the only times you should be force-pushing is when you’ve performed a local cleanup after
+                        you’ve pushed a private feature branch to a remote repository (e.g., for backup purposes). This
+                        is like saying, “Oops, I didn’t really want to push that original version of the feature branch.
+                        Take the current one instead.” Again, it’s important that nobody is working off of the commits
+                        from the original version of the feature branch.</p>
+                </article>
+            </section>
+            <section class="section_in_main">
+                <header class="section_header">
+                    <h2>Workflow walkthrough</h2>
+                    <hr>
+                </header>
+                <article class="section_article no_title_article">
+                    <p>Rebasing can be incorporated into your existing Git workflow as much or as little as your team is
+                        comfortable with. In this section, we’ll take a look at the benefits that rebasing can offer at
+                        the various stages of a feature’s development.</p>
+                    <p>The first step in any workflow that leverages git rebase is to create a dedicated branch for each
+                        feature. This gives you the necessary branch structure to safely utilize rebasing:</p>
+                    <img src="images/image6.svg" alt="Developing a feature in a dedicated branch">
+                </article>
+                <article class="section_article">
+                    <h2>
+                        Local cleanup
+                    </h2>
+                    <p>One of the best ways to incorporate rebasing into your workflow is to clean up local, in-progress
+                        features. By periodically performing an interactive rebase, you can make sure each commit in
+                        your feature is focused and meaningful. This lets you write your code without worrying about
+                        breaking it up into isolated commits—you can fix it up after the fact.</p>
+                    <p>When calling git rebase, you have two options for the new base: The feature’s parent branch
+                        (e.g., main), or an earlier commit in your feature. We saw an example of the first option in the
+                        Interactive Rebasing section. The latter option is nice when you only need to fix up the last
+                        few commits. For example, the following command begins an interactive rebase of only the last 3
+                        commits.</p>
+                    <code class="code_block">git checkout feature git rebase -i HEAD~3</code>
+                    <p>By specifying HEAD~3 as the new base, you’re not actually moving the branch—you’re just
+                        interactively re-writing the 3 commits that follow it. Note that this will not incorporate
+                        upstream changes into the feature branch.</p>
+                    <img src="images/image7.svg" alt="Rebasing onto Head~3">
+                    <p>If you want to re-write the entire feature using this method, the git merge-base command can be
+                        useful to find the original base of the feature branch. The following returns the commit ID of
+                        the original base, which you can then pass to git rebase:</p>
+                    <code class="code_block">git merge-base feature main</code>
+                    <p>This use of interactive rebasing is a great way to introduce git rebase into your workflow, as it
+                        only affects local branches. The only thing other developers will see is your finished product,
+                        which should be a clean, easy-to-follow feature branch history.</p>
+                    <p>But again, this only works for private feature branches. If you’re collaborating with other
+                        developers via the same feature branch, that branch is public, and you’re not allowed to
+                        re-write its history.</p>
+                    <p>There is no git merge alternative for cleaning up local commits with an interactive rebase.</p>
+                </article>
+                <article class="section_article">
+                    <h2>Incorporating upstream changes into a feature</h2>
+                    <p>In the Conceptual Overview section, we saw how a feature branch can incorporate upstream changes
+                        from main using either git merge or git rebase. Merging is a safe option that preserves the
+                        entire history of your repository, while rebasing creates a linear history by moving your
+                        feature branch onto the tip of main.</p>
+                    <p>This use of git rebase is similar to a local cleanup (and can be performed simultaneously), but
+                        in the process it incorporates those upstream commits from main.</p>
+                    <p>Keep in mind that it’s perfectly legal to rebase onto a remote branch instead of main. This can
+                        happen when collaborating on the same feature with another developer and you need to incorporate
+                        their changes into your repository.</p>
+                    <p>For example, if you and another developer named John added commits to the feature branch, your
+                        repository might look like the following after fetching the remote feature branch from John’s
+                        repository:</p>
+                    <img src="images/image8.svg" alt="Collaborating on the same feature branch">
+                    <p>You can resolve this fork the exact same way as you integrate upstream changes from main: either
+                        merge your local feature with john/feature, or rebase your local feature onto the tip of
+                        john/feature.</p>
+                    <img src="images/image9.svg" alt="Merging vs. rebasing onto a remote branch">
+                    <p>Note that this rebase doesn’t violate the Golden Rule of Rebasing because only your local feature
+                        commits are being moved—everything before that is untouched. This is like saying, “add my
+                        changes to what John has already done.” In most circumstances, this is more intuitive than
+                        synchronizing with the remote branch via a merge commit.</p>
+                    <p>By default, the git pull command performs a merge, but you can force it to integrate the remote
+                        branch with a rebase by passing it the --rebase option.</p>
+                </article>
+                <article class="section_article">
+                    <h2>Reviewing a feature with a pull request</h2>
+                    <p>If you use pull requests as part of your code review process, you need to avoid using git rebase
+                        after creating the pull request. As soon as you make the pull request, other developers will be
+                        looking at your commits, which means that it’s a public branch. Re-writing its history will make
+                        it impossible for Git and your teammates to track any follow-up commits added to the feature.
+                    </p>
+                    <p>Any changes from other developers need to be incorporated with git merge instead of git rebase.
+                    </p>
+                    <p>For this reason, it’s usually a good idea to clean up your code with an interactive rebase before
+                        submitting your pull request.</p>
+                </article>
+                <article class="section_article">
+                    <h2>Integrating an approved feature</h2>
+                    <p>After a feature has been approved by your team, you have the option of rebasing the feature onto
+                        the tip of the main branch before using git merge to integrate the feature into the main code
+                        base.</p>
+                    <p>This is a similar situation to incorporating upstream changes into a feature branch, but since
+                        you’re not allowed to re-write commits in the main branch, you have to eventually use git merge
+                        to integrate the feature. However, by performing a rebase before the merge, you’re assured that
+                        the merge will be fast-forwarded, resulting in a perfectly linear history. This also gives you
+                        the chance to squash any follow-up commits added during a pull request.</p>
+                    <img src="images/image10" alt="Integrating a feature into main with and without a rebase">
+                    <p>If you’re not entirely comfortable with git rebase, you can always perform the rebase in a
+                        temporary branch. That way, if you accidentally mess up your feature’s history, you can check
+                        out the original branch and try again. For example:</p>
+                    <code class="code_block">
+                        git checkout feature<br>
+                        git checkout -b temporary-branch<br>
+                        git rebase -i main<br>
+                        # [Clean up the history]<br>
+                        git checkout main<br>
+                        git merge temporary-branch<br>
+                    </code>
+                </article>
+            </section>
+            <section class="section_in_main">
+                <header class="section_header">
+                    <h2>Summary</h2>
+                    <hr>
+                </header>
+                <summary>
+                    <p>And that’s all you really need to know to start rebasing your branches. If you would prefer a
+                        clean, linear history free of unnecessary merge commits, you should reach for git rebase instead
+                        of git merge when integrating changes from another branch.</p>
+                    <p>On the other hand, if you want to preserve the complete history of your project and avoid the
+                        risk of re-writing public commits, you can stick with git merge. Either option is perfectly
+                        valid, but at least now you have the option of leveraging the benefits of git rebase.</p>
+                </summary>
+            </section>
+            <hr class="main_separator">
+            <footer id="footer_in_main">
+                <nav id="share_art_footer">
+                    <div id="left_share">
+                        <p>Share this article</p>
+                        <div id="share_svg">
+                            <svg></svg>
+                            <svg></svg>
+                            <svg></svg>
+                        </div>
+                    </div>
+                    <div id="right_next">
+                        <p>Next Topic</p>
+                        <p>Reset, checkout and revert</p>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+    </div>
+    <footer id="doc_footer">
+        <div class="doc_footer_wrapper">
+            <section id="recommended">
+                <header>
+                    <h2>Recommended reading</h2>
+                    <p>Bookmark these resources to learn about types of DevOps teams, or for ongoing updates about
+                        DevOps at Atlassian.</p>
+                </header>
+                <div id="footer_cards_grid">
+                    <div class="card">
+                        <img src="images/footer_img_1.png" alt="">
+                        <p>Bitbucket blog</p>
+                        <a href="">Learn more</a>
+                    </div>
+                    <div class="card">
+                        <img src="images/footer_img_2.png" alt="">
+                        <p>DevOps learning path</p>
+                        <a href="">Learn more</a>
+                    </div>
+                    <div class="card">
+                        <img src="images/footer_img_3.png" alt="">
+                        <p>How Bitbucket Cloud works with Atlassian Open DevOps</p>
+                        <a href="">Watch now</a>
+                    </div>
+                </div>
+            </section>
+            <section id="newsletter">
+                <header>
+                    <h3>Sign up for our DevOps newsletter </h3>
+                </header>
+                <div class="address_wrapper">
+                    <form action="https://httpbin.org/get" class="get_user_address" method="get">
+                        <label for="emailAddress">Email address</label>
+                        <input type="email" name="emailAddress" id="emailAddress" required>
+                        <button type="submit" id="signup"><a href="#">Sign Up</a></button>
+                    </form>
+                </div>
+            </section>
+            <section class="overview">
+                <div class="overview_wrapper">
+                    <nav id="footer_navitem01">
+                        <span class="navitem_title">
+                            <img src="images/attlassian_logo.svg" alt="logo" width="26px">
+                        </span>
+                        <ul>
+                            <li>Company</li>
+                            <li>Careers</li>
+                            <li>Events</li>
+                            <li>Blogs</li>
+                            <li>Investor Relations</li>
+                            <li>Atlassian Foundation</li>
+                            <li>Contact us</li>
+                        </ul>
+                    </nav>
+                    <div id="right_side_wrapper">
+                        <nav class="footer_navitems">
+                            <div class="navitems_top">
+                                <span class="navitem_title">Products</span>
+                                <ul>
+                                    <li><a href="#">Rovo</a></li>
+                                    <li><a href="#">Jira</a></li>
+                                    <li><a href="#">Jira Align</a></li>
+                                    <li><a href="#">Jira Service Management</a></li>
+                                    <li><a href="#">Confluence</a></li>
+                                    <li><a href="#">Trello</a></li>
+                                    <li><a href="#">Bitbucket</a></li>
+                                </ul>
+                            </div>
+                            <div class="navitems_bottom">
+                                <span>
+                                    <a href="">See all Products</a>
+                                    <svg class="link-arrow-image" width="11px" height="8px" viewBox="0 0 11 8"
+                                        version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g class="group-path" transform="translate(-138.000000, -586.000000)"
+                                                fill="#0052CC">
+                                                <path
+                                                    d="M145.2803,586.507862 L144.2193,587.568863 L145.9393,589.287862 L138.7503,589.287862 C138.3363,589.287862 138.0003,589.623862 138.0003,590.037862 C138.0003,590.451862 138.3363,590.787862 138.7503,590.787862 L145.9393,590.787862 L144.2193,592.507862 L145.2803,593.568863 L148.8103,590.037862 L145.2803,586.507862 Z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </div>
+                        </nav>
+                        <nav class="footer_navitems">
+                            <div class="navitems_top">
+                                <span class="navitem_title">Recources</span>
+                                <ul>
+                                    <li><a href="#">Technical support</a></li>
+                                    <li><a href="#">Purchasing & licensing</a></li>
+                                    <li><a href="#">Atlassian Community</a></li>
+                                    <li><a href="#">Knowledge base</a></li>
+                                    <li><a href="#">Marketplace</a></li>
+                                    <li><a href="#">My account</a></li>
+                                </ul>
+                            </div>
+                            <div class="navitems_bottom">
+                                <span>
+                                    <a href="">Create support ticket</a>
+                                    <svg class="link-arrow-image" width="11px" height="8px" viewBox="0 0 11 8"
+                                        version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g class="group-path" transform="translate(-138.000000, -586.000000)"
+                                                fill="#0052CC">
+                                                <path
+                                                    d="M145.2803,586.507862 L144.2193,587.568863 L145.9393,589.287862 L138.7503,589.287862 C138.3363,589.287862 138.0003,589.623862 138.0003,590.037862 C138.0003,590.451862 138.3363,590.787862 138.7503,590.787862 L145.9393,590.787862 L144.2193,592.507862 L145.2803,593.568863 L148.8103,590.037862 L145.2803,586.507862 Z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </div>
+                        </nav>
+                        <nav class="footer_navitems">
+                            <div class="navitems_top">
+                                <span class="navitem_title">Learn</span>
+                                <ul>
+                                    <li><a href="#">Partners</a></li>
+                                    <li><a href="#">Training & certification</a></li>
+                                    <li><a href="#">Documentation</a></li>
+                                    <li><a href="#">Developer resources</a></li>
+                                    <li><a href="#">Enterprise services</a></li>
+                                </ul>
+                            </div>
+                            <div class="navitems_bottom">
+                                <span>
+                                    <a href="">See all resources</a>
+                                    <svg class="link-arrow-image" width="11px" height="8px" viewBox="0 0 11 8"
+                                        version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g class="group-path" transform="translate(-138.000000, -586.000000)"
+                                                fill="#0052CC">
+                                                <path
+                                                    d="M145.2803,586.507862 L144.2193,587.568863 L145.9393,589.287862 L138.7503,589.287862 C138.3363,589.287862 138.0003,589.623862 138.0003,590.037862 C138.0003,590.451862 138.3363,590.787862 138.7503,590.787862 L145.9393,590.787862 L144.2193,592.507862 L145.2803,593.568863 L148.8103,590.037862 L145.2803,586.507862 Z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+            <section class="copyright_section">
+                <div class="copyright_wrapper">
+                    <div class="copyright">
+                        <span>Copyright &copy; 2024 Atlassian</span>
+                    </div>
+                    <div id="legal">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Impressium</a>
+                        <form action="" class="select_language_form" method="get">
+                            <img src="images/language_selector.png" alt="" width="24px" style="margin-right:5px;">
+                            <label for="selectLanguage"></label>
+                            <select name="selectLanguage" id="selectLanguage">
+                                <optgroup label="Choose language">
+                                    <option value="">Deutsch</option>
+                                    <option value="" selected>English</option>
+                                    <option value="">Español</option>
+                                    <option value="">Français</option>
+                                    <option value="">Italiano</option>
+                                    <option value="">한국어</option>
+                                    <option value="">Nederlands</option>
+                                    <option value="">日本語</option>
+                                    <option value="">Polski</option>
+                                    <option value="">Português</option>
+                                    <option value="">русский</option>
+                                    <option value="">中文</option>
+                                </optgroup>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>
