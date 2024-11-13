@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qt | Tools for Each Stage of Software Development Lifecycle</title>
+    <link rel="stylesheet" href="qt_styles.css">
+</head>
+
+<body>
+    <header class="doc-header flexContainer">
+        <div class="qt-reduced-row header-elem-wrapper flexContainer">
+            <div class="left-links flexContainer">
+                <div class="group-img">
+                    <a href="" style="display: block; height: max-content;">
+                        <svg width="122" viewBox="0 0 633 160" fill="black" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M85.0242 38.5439C76.0002 38.5439 69.8082 41.5199 66.4482 47.4719C63.0882 53.4239 61.4082 62.9279 61.4082 75.9839C61.4082 89.0399 63.0402 98.3679 66.3042 103.984C69.5682 109.6 75.8082 112.4 85.0242 112.4C94.2402 112.4 100.448 109.648 103.68 104.128C106.896 98.6079 108.496 89.2799 108.496 76.1279C108.496 62.9759 106.832 53.4239 103.536 47.4719C100.224 41.5199 94.0482 38.5439 85.0242 38.5439V38.5439Z">
+                            </path>
+                            <path
+                                d="M25.6 0L0 25.6V160H198.4L224 134.4V0H25.6ZM121.456 139.632L106.624 146.544L93.808 125.52C91.984 126.096 89.056 126.384 85.024 126.384C70.048 126.384 59.616 122.352 53.696 114.288C47.792 106.224 44.848 93.472 44.848 76.048C44.848 58.624 47.84 45.696 53.84 37.232C59.84 28.784 70.224 24.56 85.008 24.56C99.792 24.56 110.16 28.768 116.112 37.168C122.064 45.568 125.04 58.512 125.04 75.984C125.04 87.504 123.808 96.816 121.376 103.92C118.928 111.024 114.912 116.448 109.344 120.192L121.44 139.632H121.456ZM163.424 126.384C155.264 126.384 149.664 124.512 146.64 120.768C143.616 117.024 142.112 109.968 142.112 99.6V66.192H132.896V52.8H142.112V31.92H157.664V52.8H177.536V66.192H157.664V97.872C157.664 103.728 158.096 107.616 158.96 109.536C159.824 111.456 162.032 112.416 165.584 112.416L177.392 111.984L178.112 124.512C171.68 125.76 166.784 126.384 163.424 126.384V126.384Z">
+                            </path>
+                            <path
+                                d="M318.552 87.272V73.16H346.632V123.272C344.04 123.944 338.76 124.664 330.792 125.432C322.92 126.2 317.208 126.584 313.656 126.584C298.68 126.584 288.36 122.456 282.696 114.2C277.032 105.944 274.2 93.032 274.2 75.464C274.2 57.8 277.08 44.936 282.84 36.872C288.696 28.808 298.776 24.776 313.08 24.776C321.528 24.776 331.032 25.736 341.592 27.656L346.632 28.664L346.056 41.336C334.44 39.8 324.024 39.032 314.808 39.032C305.592 39.032 299.256 41.624 295.8 46.808C292.44 51.992 290.76 61.592 290.76 75.608C290.76 89.624 292.344 99.32 295.512 104.696C298.776 109.976 305.304 112.616 315.096 112.616C322.104 112.616 327.336 112.184 330.792 111.32V87.272H318.552Z">
+                            </path>
+                            <path
+                                d="M364.816 125V53H380.368V61.64C388.528 56.36 396.688 52.952 404.848 51.416V67.112C396.592 68.744 389.536 70.856 383.68 73.448L380.512 74.744V125H364.816Z">
+                            </path>
+                            <path
+                                d="M420.173 60.776C425.165 54.536 433.421 51.416 444.941 51.416C456.461 51.416 464.669 54.536 469.565 60.776C474.557 67.016 477.053 76.376 477.053 88.856C477.053 101.336 474.653 110.744 469.853 117.08C465.053 123.416 456.749 126.584 444.941 126.584C433.133 126.584 424.829 123.416 420.029 117.08C415.229 110.744 412.829 101.336 412.829 88.856C412.829 76.376 415.277 67.016 420.173 60.776ZM431.981 107.576C434.189 111.416 438.509 113.336 444.941 113.336C451.373 113.336 455.693 111.416 457.901 107.576C460.109 103.736 461.213 97.448 461.213 88.712C461.213 79.976 460.013 73.784 457.613 70.136C455.309 66.488 451.085 64.664 444.941 64.664C438.797 64.664 434.525 66.488 432.125 70.136C429.821 73.784 428.669 79.976 428.669 88.712C428.669 97.448 429.773 103.736 431.981 107.576Z">
+                            </path>
+                            <path
+                                d="M536.277 53H551.829V125H536.277V120.536C529.269 124.568 522.789 126.584 516.837 126.584C506.949 126.584 500.325 123.944 496.965 118.664C493.605 113.288 491.925 103.928 491.925 90.584V53H507.621V90.728C507.621 99.368 508.341 105.176 509.781 108.152C511.221 111.128 514.581 112.616 519.861 112.616C525.045 112.616 529.797 111.656 534.117 109.736L536.277 108.872V53Z">
+                            </path>
+                            <path
+                                d="M570.832 155.96V53H586.384V57.464C593.008 53.432 599.2 51.416 604.96 51.416C614.464 51.416 621.424 54.344 625.84 60.2C630.256 65.96 632.464 75.704 632.464 89.432C632.464 103.064 629.92 112.664 624.832 118.232C619.84 123.8 611.632 126.584 600.208 126.584C596.272 126.584 591.712 126.152 586.528 125.288V155.96H570.832ZM602.224 65.384C597.712 65.384 593.2 66.392 588.688 68.408L586.528 69.416V111.896C590.368 112.664 594.592 113.048 599.2 113.048C605.728 113.048 610.24 111.176 612.736 107.432C615.232 103.688 616.48 97.304 616.48 88.28C616.48 73.016 611.728 65.384 602.224 65.384Z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                <ul class="left-collapsible flexContainer justifySpaceBetween">
+                    <li class="has-underline" id="products">Products</li>
+                    <li class="has-underline" id="solutions">Solutions</li>
+                    <li class="has-underline" id="resources">Resources</li>
+                    <li class="has-underline" id="support">Support</li>
+                </ul>
+            </div>
+            <div class="right-links flexContainer justifySpaceBetween">
+                <ul class="help-links flexContainer justifySpaceBetween">
+                    <li>
+                        <button class="search-button">
+                            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='M8.75 3.333a5.417 5.417 0 1 0 0 10.834 5.417 5.417 0 0 0 0-10.834M1.667 8.75a7.083 7.083 0 1 1 14.166 0 7.083 7.083 0 0 1-14.166 0' clip-rule='evenodd'/%3E%3Cpath fill='%23000' fill-rule='evenodd' d='m13.333 12.155 5.345 5.345-1.178 1.178-5.345-5.345z' clip-rule='evenodd'/%3E%3C/svg%3E"
+                                alt="">
+                        </button>
+                    </li>
+                    <li class="has-underline">
+                        <a href="">
+                            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath fill='%23000' d='M10 .833A9.165 9.165 0 0 0 .833 10 9.165 9.165 0 0 0 10 19.167 9.165 9.165 0 0 0 19.167 10 9.165 9.165 0 0 0 10 .833m0 3.549a3.253 3.253 0 1 1 0 6.505 3.253 3.253 0 0 1 0-6.505m0 12.715a7.08 7.08 0 0 1-5.415-2.521c.695-1.309 2.055-2.21 3.641-2.21q.134 0 .262.04c.48.155.984.255 1.512.255.529 0 1.035-.1 1.512-.255a1 1 0 0 1 .262-.04c1.586 0 2.946.902 3.641 2.21A7.08 7.08 0 0 1 10 17.096'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h20v20H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E"
+                                alt="">
+                        </a>
+                    </li>
+                    <li class="has-underline">
+                        <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M1 10a9 9 0 1 0 18.001 0A9 9 0 0 0 1 10M1.512 13h16.976M1.512 7h16.976'/%3E%3Cpath stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M8.059 1.21a29.15 29.15 0 0 0 .68 17.702M11.941 1.21A29 29 0 0 1 13 9a28.9 28.9 0 0 1-1.733 9.912'/%3E%3C/svg%3E"
+                            alt="">
+                    </li>
+                    <li class="has-underline">
+                        <a href="">Learning Hub</a>
+                    </li>
+                    <li class="has-underline">
+                        <a href="">Developers</a>
+                    </li>
+                </ul>
+                <div class="cta-links flexContainer justifySpaceBetween">
+                    <a href="" class="link-button card-cta">Price. Buy.</a>
+                    <a href="" class="section-cta card-cta">Download. Try.</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="show-on-hover hover-menu-wrapper product-section flexContainer">
+        <div class="left-column flexContainer justifySpaceBetween">
+            <div class="left-first">
+                <p class="content-cap-summary">
+                    Development Framework & Tools
+                </p>
+                <div class="left-first-prod">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, nisi!</p>
+                    <p>Voluptatum ex odit obcaecati voluptatibus ipsa libero sint eligendi. Vitae.</p>
+                    <p>Officia perspiciatis consectetur ipsam laborum, at esse eos odio impedit!</p>
+                    <p>Quibusdam a voluptatem asperiores mollitia fugit perspiciatis quam accusantium corrupti.</p>
+                    <p>Repellat explicabo magnam hic molestiae. At blanditiis tempore cumque porro.</p>
+                </div>
+            </div>
+            <div class="left-second">
+                <p class="content-cap-summary">
+                    Quality Assurance Tools
+                </p>
+                <div class="left-first-prod">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, nisi!</p>
+                    <p>Voluptatum ex odit obcaecati voluptatibus ipsa libero sint eligendi. Vitae.</p>
+                    <p>Officia perspiciatis consectetur ipsam laborum, at esse eos odio impedit!</p>
+                    <p>Quibusdam a voluptatem asperiores mollitia fugit perspiciatis quam accusantium corrupti.</p>
+                    <p>Repellat explicabo magnam hic molestiae. At blanditiis tempore cumque porro.</p>
+                </div>
+            </div>
+        </div>
+        <div class="more-elements">
+            <p class="content-cap-summary">
+                More
+            </p>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, laboriosam?</p>
+                <p>Praesentium vero adipisci repellendus omnis? Aspernatur, quas tenetur. Beatae, blanditiis.</p>
+                <p>Illum, tempora non dolore laboriosam est exercitationem. Natus, inventore enim!</p>
+                <p>Doloremque eligendi vero repudiandae possimus fugit nulla aut enim unde!</p>
+                <p>Inventore excepturi tenetur corrupti laudantium saepe praesentium quaerat odio modi?</p>
+            </div>
+        </div>
+    </section>
+    <section class="qt-hero qt-reduced-row">
+        <hgroup>
+            <div class="reduced-content-box">
+                <h1>The Future of Digital Experiences</h1>
+            </div>
+            <div class="reduced-content-box">
+                <p>All the tools you need for creating software applications or embedded devices, from planning and
+                    design to development, testing, and future-proofing your products.</p>
+            </div>
+        </hgroup>
+        <div class="cards-wrapper gridContainer">
+            <div class="card">
+                <h3>DESIGN</h3>
+                <p>Create beautiful user interfaces</p>
+                <p class="card-cta-wrapper"><a href="#" class="card-cta">Design Tools</a></p>
+            </div>
+            <div class="card">
+                <h3>DEVELOP</h3>
+                <p>Speed up your development processes</p>
+                <p class="card-cta-wrapper"><a href="#" class="card-cta">Development Tools</a></p>
+            </div>
+            <div class="card">
+                <h3>TEST</h3>
+                <p>Automate testing and assure quality</p>
+                <p class="card-cta-wrapper"><a href="#" class="card-cta">Quality Assurance Tools</a></p>
+            </div>
+            <div class="card">
+                <h3>OPTIMIZE</h3>
+                <p>Powerful data visualization and analysis</p>
+                <p class="card-cta-wrapper"><a href="#" class="card-cta">Analytics Tools</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="success-stories qt-reduced-row">
+        <header class="section-header">
+            <h3 class="section-heading">
+                1+ Billion Devices and Applications Powered and Assured by Qt
+            </h3>
+        </header>
+        <div class="success-logo-cards gridContainer">
+            <img src="images/PEUGEOT.png" alt="">
+            <img src="images/LG.png" alt="">
+            <img src="images/Mercedes-Benz.png" alt="">
+            <img src="images/ABB.png" alt="">
+            <img src="images/tableau.png" alt="">
+            <img src="images/ducati.png" alt="">
+            <img src="images/NOVATRON.png" alt="">
+        </div>
+        <div style="text-align: center; margin: 2.5rem 0; font-weight: 600;">
+            <p>Uncover All Success Stories</p>
+        </div>
+    </section>
+    <section class="pitch-video qt-reduced-row">
+        <h1>NI KUMOTO MANZE</h1>
+    </section>
+    <section class="paper qt-reduced-row flexContainer">
+        <div class="detail">
+            <p class="content-cap-summary">
+                A FORRESTER CONSULTING PAPER
+            </p>
+            <div class="reduced-content-box">
+                <h2>Fostering High-Quality Embedded Software Development</h2>
+            </div>
+            <p class="card-cta-wrapper">
+                <a href="" class="section-cta card-cta">Download the Paper</a>
+            </p>
+        </div>
+        <div class="section-image">
+            <img src="images/Forrester-mockup-updated.webp" alt="" id="forrester_img">
+        </div>
+    </section>
+    <section class="events qt-reduced-row flexContainer">
+        <header class="section-header">
+            <h3 class="section-heading">
+                Events and Webinars on the Horizon
+            </h3>
+        </header>
+        <div class="cards-container gridContainer">
+            <div class="event-card">
+                <img src="images/Electronica-image.png" alt="" class="card-img">
+                <p class="card-title">Electronica 2024</p>
+                <time datetime="">Nov 12, 2024, 10:00 AM GMT+3<br>(9:00 UTC +2)</time>
+                <address>Messe München, Germany</address>
+                <p class="read-more"><a href="">Read more</a></p>
+            </div>
+            <div class="event-card">
+                <img src="images/Webinar_Axivion_MISRACpp_2023_840x470px_20241120.jpg" alt="" class="card-img">
+                <p class="card-title">MISRA C++:2023 - Applying the New Standard in C++ Projects</p>
+                <time datetime="">Nov 20, 2024, 06:00 PM GMT+3<br>(16:00 UTC +1)</time>
+                <address>Online</address>
+                <p class="read-more"><a href="">Read more</a></p>
+            </div>
+            <div class="event-card">
+                <img src="images/EMEA_Webinar_MPU_Thumbnail.png" alt="" class="card-img">
+                <p class="card-title">Innovative GUI Solution for Resource-Limited Embedded Systems</p>
+                <time datetime="">Nov 21, 2024, 01:00 PM GMT+3<br>(12:00 UTC +2)</time>
+                <address>Online</address>
+                <p class="read-more"><a href="">Read more</a></p>
+            </div>
+            <div class="event-card">
+                <img src="images/AMER_840x470_AWSre-Invent_2024.jpg" alt="" class="card-img">
+                <p class="card-title">AWS re:Invent</p>
+                <time datetime="">Dec 2, 2024, 07:00 PM GMT+3<br>(9:00 UTC -7)</time>
+                <address>Online and at multiple venues across Las...</address>
+                <p class="read-more"><a href="">Read more</a></p>
+            </div>
+        </div>
+        <div class="cta-wrapper flexContainer">
+            <p class="card-cta-wrapper">
+                <a href="" class="section-cta card-cta">Explore All Events</a>
+            </p>
+        </div>
+    </section>
+    <section class="more-services qt-reduced-row flexContainer">
+        <div class="section-image">
+            <img src="images/Qt-Professional-Services.webp" alt="">
+        </div>
+        <div class="detail">
+            <div class="reduced-content-box">
+                <h2>Looking to Leverage the Full Potential of Qt for Your Business?</h2>
+            </div>
+            <p class="detail-paragraph">
+                <b>Accelerate your product development with Qt Professional Services—</b>Our team of experts can help
+                you leverage Qt's powerful features, accelerate your development process, and build high-quality
+                products and solutions quickly and cost-effectively. Let us help you achieve your goals and stay ahead
+                of the competition.
+            </p>
+            <p class="card-cta-wrapper">
+                <a href="" class="section-cta card-cta">More about Qt Professional Services</a>
+            </p>
+        </div>
+    </section>
+    <footer class="doc-footer">
+        <div class="upper-footer qt-reduced-row flexContainer">
+            <div class="connect-links">
+                <div class="logo-footer-wrapper">
+                    <svg width="122" viewBox="0 0 633 160" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M85.0242 38.5439C76.0002 38.5439 69.8082 41.5199 66.4482 47.4719C63.0882 53.4239 61.4082 62.9279 61.4082 75.9839C61.4082 89.0399 63.0402 98.3679 66.3042 103.984C69.5682 109.6 75.8082 112.4 85.0242 112.4C94.2402 112.4 100.448 109.648 103.68 104.128C106.896 98.6079 108.496 89.2799 108.496 76.1279C108.496 62.9759 106.832 53.4239 103.536 47.4719C100.224 41.5199 94.0482 38.5439 85.0242 38.5439V38.5439Z">
+                        </path>
+                        <path
+                            d="M25.6 0L0 25.6V160H198.4L224 134.4V0H25.6ZM121.456 139.632L106.624 146.544L93.808 125.52C91.984 126.096 89.056 126.384 85.024 126.384C70.048 126.384 59.616 122.352 53.696 114.288C47.792 106.224 44.848 93.472 44.848 76.048C44.848 58.624 47.84 45.696 53.84 37.232C59.84 28.784 70.224 24.56 85.008 24.56C99.792 24.56 110.16 28.768 116.112 37.168C122.064 45.568 125.04 58.512 125.04 75.984C125.04 87.504 123.808 96.816 121.376 103.92C118.928 111.024 114.912 116.448 109.344 120.192L121.44 139.632H121.456ZM163.424 126.384C155.264 126.384 149.664 124.512 146.64 120.768C143.616 117.024 142.112 109.968 142.112 99.6V66.192H132.896V52.8H142.112V31.92H157.664V52.8H177.536V66.192H157.664V97.872C157.664 103.728 158.096 107.616 158.96 109.536C159.824 111.456 162.032 112.416 165.584 112.416L177.392 111.984L178.112 124.512C171.68 125.76 166.784 126.384 163.424 126.384V126.384Z">
+                        </path>
+                        <path
+                            d="M318.552 87.272V73.16H346.632V123.272C344.04 123.944 338.76 124.664 330.792 125.432C322.92 126.2 317.208 126.584 313.656 126.584C298.68 126.584 288.36 122.456 282.696 114.2C277.032 105.944 274.2 93.032 274.2 75.464C274.2 57.8 277.08 44.936 282.84 36.872C288.696 28.808 298.776 24.776 313.08 24.776C321.528 24.776 331.032 25.736 341.592 27.656L346.632 28.664L346.056 41.336C334.44 39.8 324.024 39.032 314.808 39.032C305.592 39.032 299.256 41.624 295.8 46.808C292.44 51.992 290.76 61.592 290.76 75.608C290.76 89.624 292.344 99.32 295.512 104.696C298.776 109.976 305.304 112.616 315.096 112.616C322.104 112.616 327.336 112.184 330.792 111.32V87.272H318.552Z">
+                        </path>
+                        <path
+                            d="M364.816 125V53H380.368V61.64C388.528 56.36 396.688 52.952 404.848 51.416V67.112C396.592 68.744 389.536 70.856 383.68 73.448L380.512 74.744V125H364.816Z">
+                        </path>
+                        <path
+                            d="M420.173 60.776C425.165 54.536 433.421 51.416 444.941 51.416C456.461 51.416 464.669 54.536 469.565 60.776C474.557 67.016 477.053 76.376 477.053 88.856C477.053 101.336 474.653 110.744 469.853 117.08C465.053 123.416 456.749 126.584 444.941 126.584C433.133 126.584 424.829 123.416 420.029 117.08C415.229 110.744 412.829 101.336 412.829 88.856C412.829 76.376 415.277 67.016 420.173 60.776ZM431.981 107.576C434.189 111.416 438.509 113.336 444.941 113.336C451.373 113.336 455.693 111.416 457.901 107.576C460.109 103.736 461.213 97.448 461.213 88.712C461.213 79.976 460.013 73.784 457.613 70.136C455.309 66.488 451.085 64.664 444.941 64.664C438.797 64.664 434.525 66.488 432.125 70.136C429.821 73.784 428.669 79.976 428.669 88.712C428.669 97.448 429.773 103.736 431.981 107.576Z">
+                        </path>
+                        <path
+                            d="M536.277 53H551.829V125H536.277V120.536C529.269 124.568 522.789 126.584 516.837 126.584C506.949 126.584 500.325 123.944 496.965 118.664C493.605 113.288 491.925 103.928 491.925 90.584V53H507.621V90.728C507.621 99.368 508.341 105.176 509.781 108.152C511.221 111.128 514.581 112.616 519.861 112.616C525.045 112.616 529.797 111.656 534.117 109.736L536.277 108.872V53Z">
+                        </path>
+                        <path
+                            d="M570.832 155.96V53H586.384V57.464C593.008 53.432 599.2 51.416 604.96 51.416C614.464 51.416 621.424 54.344 625.84 60.2C630.256 65.96 632.464 75.704 632.464 89.432C632.464 103.064 629.92 112.664 624.832 118.232C619.84 123.8 611.632 126.584 600.208 126.584C596.272 126.584 591.712 126.152 586.528 125.288V155.96H570.832ZM602.224 65.384C597.712 65.384 593.2 66.392 588.688 68.408L586.528 69.416V111.896C590.368 112.664 594.592 113.048 599.2 113.048C605.728 113.048 610.24 111.176 612.736 107.432C615.232 103.688 616.48 97.304 616.48 88.28C616.48 73.016 611.728 65.384 602.224 65.384Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="social-links flexContainer justifySpaceBetween">
+                    <a href="">
+                        <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 25 25'%3E%3Cpath fill='%23000' d='M18.993 2.363h3.374l-7.37 8.424 8.67 11.462h-6.789l-5.317-6.952-6.084 6.952H2.1l7.883-9.01L1.667 2.363h6.961l4.806 6.355zM17.81 20.23h1.87L7.612 4.276H5.606z' style='fill:%23fff'/%3E%3C/svg%3E"
+                            alt="">
+                    </a>
+                    <a href="">
+                        <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M6.023 16 6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7z'/%3E%3C/svg%3E"
+                            alt="">
+                    </a>
+                    <a href="">
+                        <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M15.8 4.8c-.2-1.3-.8-2.2-2.2-2.4C11.4 2 8 2 8 2s-3.4 0-5.6.4C1 2.6.3 3.5.2 4.8 0 6.1 0 8 0 8s0 1.9.2 3.2.8 2.2 2.2 2.4C4.6 14 8 14 8 14s3.4 0 5.6-.4c1.4-.3 2-1.1 2.2-2.4S16 8 16 8s0-1.9-.2-3.2M6 11V5l5 3z'/%3E%3C/svg%3E"
+                            alt="">
+                    </a>
+                    <a href="">
+                        <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 15 15'%3E%3Cpath fill='%23FFF' d='M3.16 14.243H.225V4.734H3.16zM1.725 3.409A1.725 1.725 0 0 1 .001 1.726 1.667 1.667 0 0 1 1.726.001a1.725 1.725 0 0 1 0 3.442zm12.575 10.775h-2.9v-4.65c0-1.108 0-2.55-1.55-2.55S8.068 8.201 8.068 9.426v4.708H5.1v-9.4h2.767v1.25h.058a3.1 3.1 0 0 1 2.825-1.55c2.992 0 3.55 2 3.55 4.542z'/%3E%3C/svg%3E"
+                            alt="">
+                    </a>
+                </div>
+                <div class="g2-leader">
+                    <img src="images/g2_fall_24.webp" alt="">
+                </div>
+                <div class="contact-wrapper">
+                    <a href="#" class="card-cta" style="display: block; text-align: center;">Contact Us</a>
+                </div>
+            </div>
+            <div class="navigation-links">
+                <nav class="in-site-navigation flexContainer justifySpaceBetween">
+                    <ul>
+                        <li>Qt Group</li>
+                        <li>Our Story</li>
+                        <li>Brand</li>
+                        <li>News</li>
+                        <li>Careers</li>
+                        <li>Investors</li>
+                        <li>Qt Products</li>
+                        <li>Quality Assurance Products</li>
+                    </ul>
+                    <ul>
+                        <li>Licensing</li>
+                        <li>License Agreement</li>
+                        <li>Open Source</li>
+                        <li>Download</li>
+                        <li>FAQ</li>
+                    </ul>
+                    <ul>
+                        <li>Learn Qt</li>
+                        <li>For Learners</li>
+                        <li>For Students and Teachers</li>
+                        <li>Qt Documentation</li>
+                        <li>Qt Forum</li>
+                    </ul>
+                    <ul>
+                        <li>Support & Services</li>
+                        <li>Professional Services</li>
+                        <li>Customer Success</li>
+                        <li>Support Services</li>
+                        <li>Partners</li>
+                        <li>Qt World</li>
+                    </ul>
+                </nav>
+                <div class="email-input">
+                    <form action="https://www.httpbin.org/post" method="post" class="email-input-form">
+                        <p>
+                            <label for="signUp"></label>
+                            <input type="email" name="signUp" id="signUp" placeholder="Sign up" required>
+                            <button class="signup-button">
+                                <span>Keep me informed</span>
+                            </button>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="subscribeBox" id="subscribeBox" required>
+                            <label for="subscribeBox">
+                                Yes, keep me up-to-date on new product features, industry news and more from Qt Group.*
+                            </label>
+                        </p>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="lower-footer qt-reduced-row">
+            <ul class="flexContainer justifySpaceBetween">
+                <li>&copy; 2024 The Qt Company</li>
+                <li>Legal Notice</li>
+                <li>Privacy Policy</li>
+                <li>Terms & Conditions</li>
+                <li>Trust Center</li>
+                <li>Cookie Settings</li>
+                <li>Email Preferences</li>
+            </ul>
+            <p>
+                Qt Group includes The Qt Company Oy and its global subsidiaries and affiliates.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('products')
+        .addEventListener('mouseover', () => {
+            document.querySelector('.show-on-hover').style.display = 'flex';
+        });
+
+
+        document.getElementById('products')
+        .addEventListener('mouseout', () => {
+            document.querySelector('.show-on-hover').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>
