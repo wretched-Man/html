@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 80%);
+    height: 100vh;
+}
+
+.tictactoe {
+    background-color: hsl(0, 0%, 20%);
+    border-radius: 12px;
+    padding: 1rem;
+    /* background-image: linear-gradient(to bottom right, purple, pink); */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tictactoe header {
+    font-size: 1.3rem;
+    font-family: inherit;
+    color: whitesmoke;
+}
+
+.select-player {
+    display: flex;
+    flex-direction: column;
+}
+
+.control-buttons {
+    width: 100%;
+    display: flex;
+    gap: .5rem;
+}
+
+
+button {
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.player-choice {
+    flex: 1;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+#display-instructions {
+    text-align: center;
+    font-weight: 900;
+    color: white;
+    font-size: .8rem;
+    font-family: inherit;
+}
+
+#playground {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.click-pos {
+    display: grid;
+    place-content: center;
+    width: 0;
+    height: 0;
+    border-radius: 8px;
+    background-color: hsl(0, 0%, 50%);
+    color: white;
+    font-size: 2rem;
+    font-family: inherit;
+    font-weight: 900;
+    transition: width 1s ease-in-out, height 1s ease-in-out;
+}
+
+.click-pos.smooth-transition {
+    width: 50px;
+    height: 50px;
+}
+
+.tictactoe footer {
+    width: 100%;
+    margin-top: .5rem;
+}
+
+#reset-game {
+    display: inline-block;
+    margin-left: 33%;
+    margin-right: auto;
+    border-radius: 5px;
+    border-color: transparent;
+    box-shadow: 0 0 5px red;
+}
+
+#player-o.selected {
+    border-bottom: 2px red solid;
+}
+
+#player-x.selected {
+    border-bottom: 2px blue solid;
+}
+

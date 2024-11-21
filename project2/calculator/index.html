@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calulator</title>
+    <meta name="description" content="Simple Calculator written in JavaScript.">
+    <meta name="author" content="Ephraim">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section class="calculator-wrapper">
+        <header>
+            <h1 class="app-name">Calculator App</h1>
+        </header>
+        <main class="calculator">
+            <div class="input-output">
+                <div class="input"></div>
+                <div class="output"></div>
+            </div>
+            <div class="buttons-wrapper">
+                <div class="numbers">
+                    <!-- Numbers -->
+                     <button class="button" id="clear">C</button>
+                     <button class="button operator" id="brackets">()</button>
+                     <button class="button operator" id="percent">%</button>
+                     <button class="button number op-print-as" id="9">9</button>
+                     <button class="button number op-print-as" id="8">8</button>
+                     <button class="button number op-print-as" id="7">7</button>
+                     <button class="button number op-print-as" id="6">6</button>
+                     <button class="button number op-print-as" id="5">5</button>
+                     <button class="button number op-print-as" id="4">4</button>
+                     <button class="button number op-print-as" id="3">3</button>
+                     <button class="button number op-print-as" id="2">2</button>
+                     <button class="button number op-print-as" id="1">1</button>
+                     <button class="button number op-print-as" id="neg">+/-</button>
+                     <button class="button number op-print-as" id="0">0</button>
+                     <button class="button number op-print-as" id="dec-point">.</button>
+                </div>
+                <div class="operators">
+                    <!-- Operators -->
+                    <button class="button operator op-print-as" id="divide">/</button>
+                    <button class="button operator op-print-as" id="mul">*</button>
+                    <button class="button operator op-print-as" id="sub">-</button>
+                    <button class="button operator op-print-as" id="add">+</button>
+                    <button class="button operator" id="equals">=</button>
+                </div>
+            </div>
+        </main>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
